@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Pong"
+             x:Class="Pong.MainPage">
+
+    <Grid x:Name="gridBoard">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout x:Name="board">
+
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Center">
+            <Image x:Name="paddle" Source="Assets/Images/paddle.png" HorizontalOptions="Center">
+                   <Image.GestureRecognizers>
+                <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated"/>
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

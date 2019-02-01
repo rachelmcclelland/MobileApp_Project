@@ -1,0 +1,1 @@
+C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Pong.UWP.csproj;x86
