@@ -103,6 +103,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\background.jpg" />
     <Content Include="Assets\Images\ball.png" />
     <Content Include="Assets\Images\paddle.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />

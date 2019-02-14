@@ -538,6 +538,9 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Images\background.jpg">
+      <PackagePath>Assets\Images\background.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Images\ball.png">
       <PackagePath>Assets\Images\ball.png</PackagePath>
     </AppxPackagedFile>

@@ -4,24 +4,24 @@
              xmlns:local="clr-namespace:Pong"
              x:Class="Pong.MainPage">
 
-    <Grid x:Name="gridBoard">
+    <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <StackLayout x:Name="board">
+        <StackLayout Grid.Row="0">
+            <Label Text="PONG" TextColor="Red" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="1">
+
+            <Label Text="Click below to Play!" FontSize="Medium" TextColor="Aquamarine"/>
+
+            <Button x:Name="GamePage" Text="PLAY" BackgroundColor="DarkGray" FontSize="Medium" Clicked="GamePage_Clicked"/>
 
         </StackLayout>
 
-        <StackLayout Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Center">
-            <Image x:Name="paddle" Source="Assets/Images/paddle.png" HorizontalOptions="Center">
-                   <Image.GestureRecognizers>
-                <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated"/>
-                </Image.GestureRecognizers>
-            </Image>
-        </StackLayout>
+
     </Grid>
-
 </ContentPage>
