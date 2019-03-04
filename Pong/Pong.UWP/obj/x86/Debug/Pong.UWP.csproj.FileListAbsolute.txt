@@ -1,3 +1,4 @@
+C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\Pong.UWP.csprojAssemblyReference.cache
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\App.xbf
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\MainPage.xbf
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Pong.UWP.xr.xml
@@ -8,6 +9,10 @@ C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\AppxManifes
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Core\AppxManifest.xml
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Core\Pong.UWP.exe
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Pong.UWP.build.appxrecipe
+C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\CocosSharp.dll
+C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\MonoGame.Framework.Net.dll
+C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\MonoGame.Framework.dll
+C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\box2d.dll
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\clrcompression.dll
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Microsoft.CSharp.dll
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Microsoft.VisualBasic.dll
@@ -179,7 +184,6 @@ C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Xamarin.For
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Pong.dll
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Pong.pdb
-C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\Pong.UWP.csprojAssemblyReference.cache
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\App.g.i.cs
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\App.g.cs
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\MainPage.g.i.cs
@@ -300,3 +304,10 @@ C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\MultipleQua
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\Xamarin.Forms.Platform.UAP.pri.xml
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636758552200000000.json
+C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\libEGL.dll
+C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\libGLESv2.dll
+C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\libSkiaSharp.dll
+C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\SkiaSharp.dll
+C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\SkiaSharp.Views.Interop.UWP.dll
+C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\SkiaSharp.Views.UWP.dll
+C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\SkiaSharp.Views.Forms.dll

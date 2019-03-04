@@ -106,8 +106,10 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "Pong.Android.dll" comes first in this list. */
-		"Pong.Android.dll",
+		"CocosSharp.dll",
 		"FormsViewGroup.dll",
+		"Lidgren.Network.dll",
+		"MonoGame.Framework.dll",
 		"Pong.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",

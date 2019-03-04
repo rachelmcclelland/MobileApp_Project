@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "77ac45fa75810ef28ecf58b94804c46f567cccb4"
+    "signature": "10d5e715d51cc84ea212a4ebb70648eadfa55807"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,17 +9,55 @@
     ".NETStandard,Version=v2.0/": {
       "Pong/1.0.0": {
         "dependencies": {
+          "CocosSharp": "1.7.1",
           "NETStandard.Library": "2.0.3",
+          "SkiaSharp.Views.Forms": "1.68.0",
           "Xamarin.Forms": "3.4.0.1008975"
         },
         "runtime": {
           "Pong.dll": {}
         }
       },
+      "CocosSharp/1.7.1": {
+        "runtime": {
+          "lib/portable-net45+win+wpa81+wp81/CocosSharp.dll": {
+            "assemblyVersion": "1.7.1.0",
+            "fileVersion": "1.7.1.0"
+          },
+          "lib/portable-net45+win+wpa81+wp81/MonoGame.Framework.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          },
+          "lib/portable-net45+win+wpa81+wp81/box2d.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "SkiaSharp/1.68.0": {
+        "runtime": {
+          "lib/netstandard1.3/SkiaSharp.dll": {
+            "assemblyVersion": "1.68.0.0",
+            "fileVersion": "1.68.0.0"
+          }
+        }
+      },
+      "SkiaSharp.Views.Forms/1.68.0": {
+        "dependencies": {
+          "SkiaSharp": "1.68.0",
+          "Xamarin.Forms": "3.4.0.1008975"
+        },
+        "runtime": {
+          "lib/netstandard1.3/SkiaSharp.Views.Forms.dll": {
+            "assemblyVersion": "1.68.0.0",
+            "fileVersion": "1.68.0.0"
+          }
         }
       },
       "Xamarin.Forms/3.4.0.1008975": {
@@ -46,6 +84,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "CocosSharp/1.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ld9x++vo1xqAVb7jy6QZ5VBJ+D5FZhFwjMiMH7OLc+ss0U71hCWRaT/lVKRj2KELI9HoZpf9H0e8mYOYAYZayA==",
+      "path": "cocossharp/1.7.1",
+      "hashPath": "cocossharp.1.7.1.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -59,6 +104,20 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "SkiaSharp/1.68.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ptuxAKk9FiClNnAgWM8hVMCYw/B0hUJWZ8W6efnIAtJmJn/Xl4jvxxDF5WOqfQYCLVzxXw5gvBPVxvTLblFp0g==",
+      "path": "skiasharp/1.68.0",
+      "hashPath": "skiasharp.1.68.0.nupkg.sha512"
+    },
+    "SkiaSharp.Views.Forms/1.68.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VqxL96ywOA9HUj1MAEO6yvSzg4Tk03ZHvvxQFhbUKgCodDxk9lIUxmBcssTZ/wYjOUn9R2Lf/VIpDMQZlhVh/A==",
+      "path": "skiasharp.views.forms/1.68.0",
+      "hashPath": "skiasharp.views.forms.1.68.0.nupkg.sha512"
     },
     "Xamarin.Forms/3.4.0.1008975": {
       "type": "package",

@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:Pong"
              x:Class="Pong.MainPage">
 
-    <Grid>
+    <Grid x:Name="mainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>

@@ -7,6 +7,13 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using SkiaSharp;
+using SkiaSharp.Views.Forms;
+
+using CocosSharp;
+using System.Reflection;
+using System.IO;
+
 namespace Pong
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -14,37 +21,21 @@ namespace Pong
     {
         private double _startTranslationX, _startTranslationY;
         private double windowHeight = Application.Current.MainPage.Height;
-        private double windowWidth = Application.Current.MainPage.Width;
+    //    private double windowWidth = 
+        private SKBitmap ball;
 
         public GamePage()
         {
             InitializeComponent();
     //        setDefaultSettings();
             addPaddle();
-            addBallToGameAsync();
 
-      //     DisplayAlert("width", " " + windowWidth, "Cancel");
-        }
+            Device.StartTimer(TimeSpan.FromSeconds(1f/60), () =>
+            {
+                canvasView.InvalidateSurface();
 
-        private void addPaddle()
-        {
-
-            Image paddle = new Image();
-
-            var assembly = typeof(MainPage);
-            string filename = "Pong.Assets.Images.paddle.png";
-            paddle.Source = ImageSource.FromResource(filename, assembly);
-
-            paddle.TranslationY = (windowHeight - 200) ;
-
-
-            var panGestureRecognizer = new PanGestureRecognizer();
-            panGestureRecognizer.PanUpdated += PanGestureRecognizer_PanUpdated;
-
-            paddle.GestureRecognizers.Add(panGestureRecognizer);
-
-            board.Children.Add(paddle);
-
+                return true;
+            });
         }
 
         private void setDefaultSettings()
@@ -59,58 +50,143 @@ namespace Pong
 
 
 
-            gridBoard.Children.Add(background);
+            //gridBoard.Children.Add(background);
 
         }
 
-        private void addBallToGameAsync()
+        private void addPaddle()
         {
 
-            Random random = new Random();
-
-  //          String ballPath = "Assets/Images/ball.png";
-
-            Image ball = new Image();
+            Image paddle = new Image();
 
             var assembly = typeof(MainPage);
-            string filename = "Pong.Assets.Images.ball.png";
-            ball.Source = ImageSource.FromResource(filename, assembly);
-       //     ball.Source = ballPath;
-            //          ball.TranslationX = random.Next(0, 500);
-            //        ball.TranslationY = random.Next(0, 500);
-            //putting the image in the middle of the page with 0, 0 ot 400
-        //    ball.TranslationX = 200;
-         //   ball.TranslationY = 5;
-            
+            string filename = "Pong.Assets.Images.paddle.png";
+            paddle.Source = ImageSource.FromResource(filename, assembly);
 
-            board.Children.Add(ball);
+           // paddle.TranslationX = 100;
+            paddle.TranslationY = (windowHeight - 200) ;
 
-            int x = 40;
-            int y = 40;
-            double ballX;
-//            DisplayAlert("ball", "x = " + ball.TranslationX + " y = " + ball.TranslationY, "cancel");
 
-            Device.StartTimer(TimeSpan.FromSeconds(0.5), () =>
+            var panGestureRecognizer = new PanGestureRecognizer();
+            panGestureRecognizer.PanUpdated += PanGestureRecognizer_PanUpdated;
+
+            paddle.GestureRecognizers.Add(panGestureRecognizer);
+
+            //board.Children.Add(paddle);
+
+        }
+
+        //speed the ball is going
+        int speedX = 3;
+        int speedY = 3;
+
+        //starting position of the ball
+        int x = 650;
+        int y = 100;
+
+        //boolean variables for detecting the movement of the ball
+        Boolean moveLeft = false;
+        Boolean moveRight = true;
+        Boolean moveUp = false;
+        Boolean moveDown = true;
+
+        private void CanvasView_PaintSurface(object sender, SKPaintSurfaceEventArgs e)
+        {
+            SKSurface surface = e.Surface;
+            SKCanvas canvas = surface.Canvas;
+
+            canvas.Clear(SKColors.Gray);
+
+            int width = e.Info.Width;
+            int height = e.Info.Height;
+
+            SKPaint paint = new SKPaint
             {
-                ball.TranslateTo(x, y, 750);
+                Style = SKPaintStyle.Stroke,
+                Color = Color.Black.ToSKColor(),
+                StrokeWidth = 10
+            };
 
-                ballX = ball.TranslationX;
-   //             DisplayAlert("Ball", " " + ballX, "cancel");
+            canvas.Save();
+            canvas.DrawCircle(x, y, 15, paint);
 
-                if (ballX >= 200)
+            paint.Style = SKPaintStyle.Fill;
+            paint.Color = SKColors.Blue;
+            canvas.DrawCircle(x, y, 15, paint);
+
+            if (moveDown)
+            {
+                if (y >= height)
                 {
-                    x -= 40;
-                    y -= 40;
+                    y -= speedY;
+                    moveDown = false;
+                    moveUp = true;
                 }
                 else
                 {
-                    x += 40;
-                    y += 40;
+                    y += speedY;
                 }
-                 return true; // True = Repeat again, False = Stop the timer
-             });
-        }
+            }
 
+            if (moveLeft)
+            {
+                if (x <= 0)
+                {
+                    x += speedX;
+                    moveLeft = false;
+                    moveRight = true;
+                }
+                else
+                {
+                    x -= speedX;
+                }
+            }
+
+            if (moveUp)
+            {
+                if (y <= 0)
+                {
+                    y += speedY;
+                    moveUp = false;
+                    moveDown = true;
+                }
+                else
+                {
+                    y -= speedY;
+                }
+            }
+
+            if (moveRight)
+            {
+                if (x >= width)
+                {
+                    x -= speedX;
+                    moveRight = false;
+                    moveLeft = true;
+                }
+                else
+                {
+                    x += speedX;
+                }
+            }
+            canvas.Restore();
+
+
+            //string resourceID = "Pong.Assets.Images.ball.png";
+            //Assembly assembly = GetType().GetTypeInfo().Assembly;
+
+            //using (Stream stream = assembly.GetManifestResourceStream(resourceID))
+            //{
+            //    ball = SKBitmap.Decode(stream);
+
+            //}
+            //canvas.DrawBitmap(ball, x, y);
+
+            //x += 40;
+            //y += 40;
+
+            //canvasView.InvalidateSurface();
+        }
 
         private void PanGestureRecognizer_PanUpdated(object sender, PanUpdatedEventArgs e)
         {
