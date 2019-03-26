@@ -2,19 +2,6 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "CocosSharp/1.7.1": {
-        "type": "package",
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp81/CocosSharp.dll": {},
-          "lib/portable-net45+win+wpa81+wp81/MonoGame.Framework.dll": {},
-          "lib/portable-net45+win+wpa81+wp81/box2d.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp81/CocosSharp.dll": {},
-          "lib/portable-net45+win+wpa81+wp81/MonoGame.Framework.dll": {},
-          "lib/portable-net45+win+wpa81+wp81/box2d.dll": {}
-        }
-      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -83,6 +70,42 @@
           "lib/netstandard1.3/SkiaSharp.Views.Forms.dll": {}
         }
       },
+      "TouchTracking/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.3/TouchTracking.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/TouchTracking.dll": {}
+        }
+      },
+      "TouchTracking.Forms/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "TouchTracking": "1.0.0",
+          "Xamarin.Forms": "2.5.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/TouchTracking.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/TouchTracking.Forms.dll": {}
+        }
+      },
+      "Xam.Plugin.SimpleAudioPlayer/1.3.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/Plugin.SimpleAudioPlayer.Abstractions.dll": {},
+          "lib/netstandard1.0/Plugin.SimpleAudioPlayer.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Plugin.SimpleAudioPlayer.Abstractions.dll": {},
+          "lib/netstandard1.0/Plugin.SimpleAudioPlayer.dll": {}
+        }
+      },
       "Xamarin.Forms/3.4.0.1008975": {
         "type": "package",
         "compile": {
@@ -103,54 +126,6 @@
     }
   },
   "libraries": {
-    "CocosSharp/1.7.1": {
-      "sha512": "ld9x++vo1xqAVb7jy6QZ5VBJ+D5FZhFwjMiMH7OLc+ss0U71hCWRaT/lVKRj2KELI9HoZpf9H0e8mYOYAYZayA==",
-      "type": "package",
-      "path": "cocossharp/1.7.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "cocossharp.1.7.1.nupkg.sha512",
-        "cocossharp.nuspec",
-        "lib/MonoAndroid10/CocosSharp.XML",
-        "lib/MonoAndroid10/CocosSharp.dll",
-        "lib/MonoAndroid10/Lidgren.Network.dll",
-        "lib/MonoAndroid10/Lidgren.Network.xml",
-        "lib/MonoAndroid10/MonoGame.Framework.dll",
-        "lib/MonoAndroid10/MonoGame.Framework.xml",
-        "lib/Xamarin.iOS10/CocosSharp.XML",
-        "lib/Xamarin.iOS10/CocosSharp.dll",
-        "lib/Xamarin.iOS10/Lidgren.Network.dll",
-        "lib/Xamarin.iOS10/Lidgren.Network.xml",
-        "lib/Xamarin.iOS10/MonoGame.Framework.Net.dll",
-        "lib/Xamarin.iOS10/MonoGame.Framework.Net.xml",
-        "lib/Xamarin.iOS10/MonoGame.Framework.dll",
-        "lib/Xamarin.iOS10/MonoGame.Framework.xml",
-        "lib/Xamarin.iOS10/box2d.dll",
-        "lib/portable-net45+win+wpa81+wp81/CocosSharp.dll",
-        "lib/portable-net45+win+wpa81+wp81/MonoGame.Framework.dll",
-        "lib/portable-net45+win+wpa81+wp81/box2d.dll",
-        "lib/wpa81/CocosSharp.XML",
-        "lib/wpa81/CocosSharp.dll",
-        "lib/wpa81/MonoGame.Framework.Net.dll",
-        "lib/wpa81/MonoGame.Framework.Net.xml",
-        "lib/wpa81/MonoGame.Framework.dll",
-        "lib/wpa81/MonoGame.Framework.xml",
-        "lib/wpa81/SharpDX.DXGI.dll",
-        "lib/wpa81/SharpDX.DXGI.xml",
-        "lib/wpa81/SharpDX.Direct2D1.dll",
-        "lib/wpa81/SharpDX.Direct2D1.xml",
-        "lib/wpa81/SharpDX.Direct3D11.dll",
-        "lib/wpa81/SharpDX.Direct3D11.xml",
-        "lib/wpa81/SharpDX.MediaFoundation.dll",
-        "lib/wpa81/SharpDX.MediaFoundation.xml",
-        "lib/wpa81/SharpDX.XAudio2.dll",
-        "lib/wpa81/SharpDX.XAudio2.xml",
-        "lib/wpa81/SharpDX.dll",
-        "lib/wpa81/SharpDX.xml",
-        "lib/wpa81/box2d.dll"
-      ]
-    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -366,6 +341,85 @@
         "skiasharp.views.forms.nuspec"
       ]
     },
+    "TouchTracking/1.0.1": {
+      "sha512": "brrHEKiuF2HZRD3yiHMzJUIgUxVT5bYIhhuK9OeMMeH6C7j2BN3lFIYzxwShR0TnWAu5VtgxCzueUre+APC6oA==",
+      "type": "package",
+      "path": "touchtracking/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid/TouchTracking.Droid.dll",
+        "lib/MonoAndroid/TouchTracking.dll",
+        "lib/XamariniOS/TouchTracking.dll",
+        "lib/XamariniOS/TouchTracking.iOS.dll",
+        "lib/netstandard1.3/TouchTracking.dll",
+        "lib/uap10.0/TouchTracking.UWP.dll",
+        "lib/uap10.0/TouchTracking.dll",
+        "touchtracking.1.0.1.nupkg.sha512",
+        "touchtracking.nuspec"
+      ]
+    },
+    "TouchTracking.Forms/1.0.0": {
+      "sha512": "rdcFo/JewOcBhoPSGAPbUsCPAYzjuKIgzNZ12vRtuGqPh+uJHXBZLMMGeDtrBr2uakfMCzc1eS9ioAyv3oNc6Q==",
+      "type": "package",
+      "path": "touchtracking.forms/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid/TouchTracking.Forms.Droid.dll",
+        "lib/MonoAndroid/TouchTracking.Forms.dll",
+        "lib/XamariniOS/TouchTracking.Forms.dll",
+        "lib/XamariniOS/TouchTracking.Forms.iOS.dll",
+        "lib/netstandard1.3/TouchTracking.Forms.dll",
+        "lib/uap10.0/TouchTracking.Forms.UWP.dll",
+        "lib/uap10.0/TouchTracking.Forms.dll",
+        "touchtracking.forms.1.0.0.nupkg.sha512",
+        "touchtracking.forms.nuspec"
+      ]
+    },
+    "Xam.Plugin.SimpleAudioPlayer/1.3.0": {
+      "sha512": "kHFlQHxEtCGM5Kt6jWYkR8cmCRVhwTOSWw0aEcTZWt1FDrCe5JmRlCqBf3QF9O/t3W8pBOI3U5basE8EGTjueA==",
+      "type": "package",
+      "path": "xam.plugin.simpleaudioplayer/1.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.XML",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.dll",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.pdb",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.dll",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.pdb",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.pri",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.xml",
+        "lib/Xamarin.Mac20/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/Xamarin.Mac20/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/Xamarin.Mac20/Plugin.SimpleAudioPlayer.dll",
+        "lib/Xamarin.Mac20/Plugin.SimpleAudioPlayer.xml",
+        "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.XML",
+        "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll",
+        "lib/Xamarintvos/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/Xamarintvos/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/Xamarintvos/Plugin.SimpleAudioPlayer.dll",
+        "lib/Xamarintvos/Plugin.SimpleAudioPlayer.xml",
+        "lib/net45/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/net45/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/net45/Plugin.SimpleAudioPlayer.dll",
+        "lib/net45/Plugin.SimpleAudioPlayer.pdb",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.deps.json",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.dll",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.pdb",
+        "xam.plugin.simpleaudioplayer.1.3.0.nupkg.sha512",
+        "xam.plugin.simpleaudioplayer.nuspec"
+      ]
+    },
     "Xamarin.Forms/3.4.0.1008975": {
       "sha512": "tM9syeev45u92OFENGjq+Zw8WiEwLJFiXe317XpL9SY2RRk9sm2fc1lDVjzwz0da+5ZP5fi24NAPsPQdxBdMwQ==",
       "type": "package",
@@ -515,9 +569,11 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "CocosSharp >= 1.7.1",
       "NETStandard.Library >= 2.0.3",
       "SkiaSharp.Views.Forms >= 1.68.0",
+      "TouchTracking >= 1.0.1",
+      "TouchTracking.Forms >= 1.0.0",
+      "Xam.Plugin.SimpleAudioPlayer >= 1.3.0",
       "Xamarin.Forms >= 3.4.0.1008975"
     ]
   },
@@ -528,11 +584,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rache\\Documents\\MobileApp2\\Pong\\Pong\\Pong\\Pong.csproj",
+      "projectUniqueName": "C:\\Users\\rache\\Documents\\GMIT\\MobileApp2\\Pong\\Pong\\Pong\\Pong.csproj",
       "projectName": "Pong",
-      "projectPath": "C:\\Users\\rache\\Documents\\MobileApp2\\Pong\\Pong\\Pong\\Pong.csproj",
+      "projectPath": "C:\\Users\\rache\\Documents\\GMIT\\MobileApp2\\Pong\\Pong\\Pong\\Pong.csproj",
       "packagesPath": "C:\\Users\\rache\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rache\\Documents\\MobileApp2\\Pong\\Pong\\Pong\\obj\\",
+      "outputPath": "C:\\Users\\rache\\Documents\\GMIT\\MobileApp2\\Pong\\Pong\\Pong\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -562,10 +618,6 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
-          "CocosSharp": {
-            "target": "Package",
-            "version": "[1.7.1, )"
-          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
@@ -575,6 +627,18 @@
           "SkiaSharp.Views.Forms": {
             "target": "Package",
             "version": "[1.68.0, )"
+          },
+          "TouchTracking": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          },
+          "TouchTracking.Forms": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
+          "Xam.Plugin.SimpleAudioPlayer": {
+            "target": "Package",
+            "version": "[1.3.0, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
@@ -588,17 +652,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'CocosSharp 1.7.1' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
-      "libraryId": "CocosSharp",
-      "targetGraphs": [
-        ".NETStandard,Version=v2.0"
-      ]
-    }
-  ]
+  }
 }

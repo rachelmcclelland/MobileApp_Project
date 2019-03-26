@@ -106,11 +106,18 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "Pong.Android.dll" comes first in this list. */
-		"CocosSharp.dll",
+		"Pong.Android.dll",
 		"FormsViewGroup.dll",
-		"Lidgren.Network.dll",
-		"MonoGame.Framework.dll",
+		"Plugin.SimpleAudioPlayer.Abstractions.dll",
+		"Plugin.SimpleAudioPlayer.dll",
 		"Pong.dll",
+		"SkiaSharp.dll",
+		"SkiaSharp.Views.Android.dll",
+		"SkiaSharp.Views.Forms.dll",
+		"TouchTracking.dll",
+		"TouchTracking.Droid.dll",
+		"TouchTracking.Forms.dll",
+		"TouchTracking.Forms.Droid.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Runtime.dll",

@@ -10,35 +10,23 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>ec0cc741-fd3e-485c-81be-68815c480690</PackageIdentityName>
     <PackageIdentityPublisher>CN=c9a90540-4a49-48ca-8537-ac3c30c812ab</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Pong.UWP.exe">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Pong.UWP.exe">
       <PackagePath>entrypoint\Pong.UWP.exe</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\cocossharp\1.7.1\lib\wpa81\CocosSharp.dll">
-      <PackagePath>CocosSharp.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\cocossharp\1.7.1\lib\wpa81\MonoGame.Framework.Net.dll">
-      <PackagePath>MonoGame.Framework.Net.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\cocossharp\1.7.1\lib\wpa81\MonoGame.Framework.dll">
-      <PackagePath>MonoGame.Framework.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\cocossharp\1.7.1\lib\wpa81\box2d.dll">
-      <PackagePath>box2d.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.1.5\runtimes\win10-x86\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
@@ -553,6 +541,24 @@
     <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\skiasharp.views.forms\1.68.0\lib\uap10.0\SkiaSharp.Views.Forms.dll">
       <PackagePath>SkiaSharp.Views.Forms.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\touchtracking\1.0.1\lib\uap10.0\TouchTracking.UWP.dll">
+      <PackagePath>TouchTracking.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\touchtracking\1.0.1\lib\uap10.0\TouchTracking.dll">
+      <PackagePath>TouchTracking.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\touchtracking.forms\1.0.0\lib\uap10.0\TouchTracking.Forms.UWP.dll">
+      <PackagePath>TouchTracking.Forms.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\touchtracking.forms\1.0.0\lib\uap10.0\TouchTracking.Forms.dll">
+      <PackagePath>TouchTracking.Forms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\xam.plugin.simpleaudioplayer\1.3.0\lib\UAP10\Plugin.SimpleAudioPlayer.Abstractions.dll">
+      <PackagePath>Plugin.SimpleAudioPlayer.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\xam.plugin.simpleaudioplayer\1.3.0\lib\UAP10\Plugin.SimpleAudioPlayer.dll">
+      <PackagePath>Plugin.SimpleAudioPlayer.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\xamarin.forms\3.4.0.1008975\lib\uap10.0\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
     </AppxPackagedFile>
@@ -565,136 +571,139 @@
     <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\xamarin.forms\3.4.0.1008975\lib\uap10.0\Xamarin.Forms.Xaml.dll">
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong\bin\Debug\netstandard2.0\Pong.dll">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\bin\Debug\netstandard2.0\Pong.dll">
       <PackagePath>Pong.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Images\background.jpg">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\bounce.wav">
+      <PackagePath>Assets\bounce.wav</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Images\background.jpg">
       <PackagePath>Assets\Images\background.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Images\paddle.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Images\paddle.png">
       <PackagePath>Assets\Images\paddle.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\LargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\LargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\LargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\SmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\SmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\SmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square150x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square150x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square44x44Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square44x44Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square44x44Logo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square44x44Logo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square44x44Logo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\StoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\StoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Wide310x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Assets\Wide310x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Pong.UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Pong.UWP.xr.xml">
       <PackagePath>Pong.UWP.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
@@ -703,10 +712,10 @@
     <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\xamarin.forms\3.4.0.1008975\lib\uap10.0\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Core\Pong.UWP.exe">
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Core\Pong.UWP.exe">
       <PackagePath>Pong.UWP.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

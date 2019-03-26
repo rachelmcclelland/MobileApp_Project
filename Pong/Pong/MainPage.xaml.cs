@@ -9,30 +9,39 @@ namespace Pong
 {
     public partial class MainPage : ContentPage
     {
+        bool bN;
 
         public MainPage()
         {
             InitializeComponent();
-            setUpBackground();
-            
+            BackgroundImage = "Assets/Images/background.jpg";
+            setDefaultSettings();
         }
 
-        private void setUpBackground()
+        private void setDefaultSettings()
         {
-            //Image background = new Image();
-
-            //var assembly = typeof(MainPage);
-            //string filename = "Pong.Assets.Images.background.jpg";
-            //background.Source = ImageSource.FromResource(filename, assembly);
-            //background.Aspect = Aspect.AspectFill;
-
-            BackgroundImage = "Assets/Images/background.png";  
-        //    mainGrid.Children.Add(background);
+            bN = false;
         }
 
         private void GamePage_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new GamePage());
+        }
+
+        private void Name_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if(entName.Text == "")
+            {
+                bN = false;
+                playBtn.IsEnabled = false;
+            }
+            else
+            {
+                bN = true;
+            }
+
+            if (bN) playBtn.IsEnabled = true;
+
         }
     }
 }
