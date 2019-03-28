@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-26T20:16:39.735</Modified>
+      <Modified>2019-03-28T16:31:51.414</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Pong.UWP.exe">
       <PackagePath>entrypoint\Pong.UWP.exe</PackagePath>
-      <Modified>2019-03-26T20:16:38.511</Modified>
+      <Modified>2019-03-28T16:31:50.718</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.1.5\runtimes\win10-x86\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
@@ -722,22 +722,6 @@
       <PackagePath>SkiaSharp.Views.Forms.dll</PackagePath>
       <Modified>2018-12-02T22:22:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\touchtracking\1.0.1\lib\uap10.0\TouchTracking.UWP.dll">
-      <PackagePath>TouchTracking.UWP.dll</PackagePath>
-      <Modified>2018-12-18T22:29:30.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\touchtracking\1.0.1\lib\uap10.0\TouchTracking.dll">
-      <PackagePath>TouchTracking.dll</PackagePath>
-      <Modified>2018-12-18T22:29:30.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\touchtracking.forms\1.0.0\lib\uap10.0\TouchTracking.Forms.UWP.dll">
-      <PackagePath>TouchTracking.Forms.UWP.dll</PackagePath>
-      <Modified>2018-01-09T08:35:28.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\touchtracking.forms\1.0.0\lib\uap10.0\TouchTracking.Forms.dll">
-      <PackagePath>TouchTracking.Forms.dll</PackagePath>
-      <Modified>2018-01-09T08:35:28.000</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\xam.plugin.simpleaudioplayer\1.3.0\lib\UAP10\Plugin.SimpleAudioPlayer.Abstractions.dll">
       <PackagePath>Plugin.SimpleAudioPlayer.Abstractions.dll</PackagePath>
       <Modified>2019-01-19T22:23:26.000</Modified>
@@ -764,7 +748,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\bin\Debug\netstandard2.0\Pong.dll">
       <PackagePath>Pong.dll</PackagePath>
-      <Modified>2019-03-26T20:16:31.720</Modified>
+      <Modified>2019-03-28T16:31:46.253</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -927,11 +911,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-03-26T20:16:38.286</Modified>
+      <Modified>2019-03-28T16:31:50.582</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-03-26T20:16:38.286</Modified>
+      <Modified>2019-03-28T16:31:50.583</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -943,11 +927,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-03-25T18:10:11.657</Modified>
+      <Modified>2019-03-28T10:19:19.986</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Core\Pong.UWP.exe">
       <PackagePath>Pong.UWP.exe</PackagePath>
-      <Modified>2019-03-26T20:16:39.726</Modified>
+      <Modified>2019-03-28T16:31:51.407</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

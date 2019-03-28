@@ -2,31 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:tt="clr-namespace:TouchTracking.Forms;assembly=TouchTracking.Forms"
              x:Class="Pong.GamePage">
-    <!--<Grid x:Name="gridBoard" BackgroundColor="Gray" >
 
-        <StackLayout  x:Name="board"  >
-            --><!--<Image x:Name="paddle" Source="Assets/Images/paddle.png" VerticalOptions="End" HorizontalOptions="Start">
-                <Image.GestureRecognizers>
-                    <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated"/>
-                </Image.GestureRecognizers>
-            </Image>--><!--
-
-        </StackLayout>
-
-    </Grid>-->
  
     <Grid x:Name="board">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-        <skia:SKCanvasView x:Name="canvasView" PaintSurface="CanvasView_PaintSurface" IgnorePixelScaling="True" Touch="CanvasView_Touch" 
-                           EnableTouchEvents="True" >
+        <skia:SKCanvasView x:Name="canvasView" PaintSurface="CanvasView_PaintSurface" IgnorePixelScaling="True" 
+                           Touch="CanvasView_Touch" EnableTouchEvents="True" >
         </skia:SKCanvasView>
 
-        <!--<Grid.Effects>
-            <tt:TouchEffect Capture="True"
-                            TouchAction="TouchEffect_TouchAction" />
-        </Grid.Effects>-->
+        <!--Touch="CanvasView_Touch" EnableTouchEvents="True"-->
+        <StackLayout x:Name="movementBtns" Grid.Row="1" Orientation="Horizontal">
+            <Button x:Name="moveLeftBtn" Text="Left" TextColor="White" BackgroundColor="Blue" Clicked="MoveLeftBtn_Clicked" WidthRequest="50"
+                    HorizontalOptions="Center"></Button>
+            <Button x:Name="moveRightBtn" Text="Right" TextColor="White" BackgroundColor="Blue" 
+                    HorizontalOptions="Center" Clicked="MoveRightBtn_Clicked" ></Button>
+        </StackLayout>
 
 
     </Grid>

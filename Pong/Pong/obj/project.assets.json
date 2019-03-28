@@ -70,28 +70,6 @@
           "lib/netstandard1.3/SkiaSharp.Views.Forms.dll": {}
         }
       },
-      "TouchTracking/1.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard1.3/TouchTracking.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.3/TouchTracking.dll": {}
-        }
-      },
-      "TouchTracking.Forms/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "TouchTracking": "1.0.0",
-          "Xamarin.Forms": "2.5.0"
-        },
-        "compile": {
-          "lib/netstandard1.3/TouchTracking.Forms.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.3/TouchTracking.Forms.dll": {}
-        }
-      },
       "Xam.Plugin.SimpleAudioPlayer/1.3.0": {
         "type": "package",
         "dependencies": {
@@ -341,42 +319,6 @@
         "skiasharp.views.forms.nuspec"
       ]
     },
-    "TouchTracking/1.0.1": {
-      "sha512": "brrHEKiuF2HZRD3yiHMzJUIgUxVT5bYIhhuK9OeMMeH6C7j2BN3lFIYzxwShR0TnWAu5VtgxCzueUre+APC6oA==",
-      "type": "package",
-      "path": "touchtracking/1.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid/TouchTracking.Droid.dll",
-        "lib/MonoAndroid/TouchTracking.dll",
-        "lib/XamariniOS/TouchTracking.dll",
-        "lib/XamariniOS/TouchTracking.iOS.dll",
-        "lib/netstandard1.3/TouchTracking.dll",
-        "lib/uap10.0/TouchTracking.UWP.dll",
-        "lib/uap10.0/TouchTracking.dll",
-        "touchtracking.1.0.1.nupkg.sha512",
-        "touchtracking.nuspec"
-      ]
-    },
-    "TouchTracking.Forms/1.0.0": {
-      "sha512": "rdcFo/JewOcBhoPSGAPbUsCPAYzjuKIgzNZ12vRtuGqPh+uJHXBZLMMGeDtrBr2uakfMCzc1eS9ioAyv3oNc6Q==",
-      "type": "package",
-      "path": "touchtracking.forms/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid/TouchTracking.Forms.Droid.dll",
-        "lib/MonoAndroid/TouchTracking.Forms.dll",
-        "lib/XamariniOS/TouchTracking.Forms.dll",
-        "lib/XamariniOS/TouchTracking.Forms.iOS.dll",
-        "lib/netstandard1.3/TouchTracking.Forms.dll",
-        "lib/uap10.0/TouchTracking.Forms.UWP.dll",
-        "lib/uap10.0/TouchTracking.Forms.dll",
-        "touchtracking.forms.1.0.0.nupkg.sha512",
-        "touchtracking.forms.nuspec"
-      ]
-    },
     "Xam.Plugin.SimpleAudioPlayer/1.3.0": {
       "sha512": "kHFlQHxEtCGM5Kt6jWYkR8cmCRVhwTOSWw0aEcTZWt1FDrCe5JmRlCqBf3QF9O/t3W8pBOI3U5basE8EGTjueA==",
       "type": "package",
@@ -571,8 +513,6 @@
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
       "SkiaSharp.Views.Forms >= 1.68.0",
-      "TouchTracking >= 1.0.1",
-      "TouchTracking.Forms >= 1.0.0",
       "Xam.Plugin.SimpleAudioPlayer >= 1.3.0",
       "Xamarin.Forms >= 3.4.0.1008975"
     ]
@@ -627,14 +567,6 @@
           "SkiaSharp.Views.Forms": {
             "target": "Package",
             "version": "[1.68.0, )"
-          },
-          "TouchTracking": {
-            "target": "Package",
-            "version": "[1.0.1, )"
-          },
-          "TouchTracking.Forms": {
-            "target": "Package",
-            "version": "[1.0.0, )"
           },
           "Xam.Plugin.SimpleAudioPlayer": {
             "target": "Package",

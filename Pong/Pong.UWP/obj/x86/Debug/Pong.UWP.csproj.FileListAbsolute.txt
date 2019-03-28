@@ -316,7 +316,6 @@ C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Plugin.Simp
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Plugin.SimpleAudioPlayer.dll
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Plugin.SimpleAudioPlayer.pdb
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\Plugin.SimpleAudioPlayer.pri.xml
-C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\Pong.UWP.csprojAssemblyReference.cache
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\App.xbf
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\MainPage.xbf
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Pong.UWP.xr.xml
@@ -498,10 +497,6 @@ C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\SkiaSh
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\SkiaSharp.Views.Interop.UWP.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\SkiaSharp.Views.UWP.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\SkiaSharp.Views.Forms.dll
-C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\TouchTracking.UWP.dll
-C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\TouchTracking.dll
-C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\TouchTracking.Forms.UWP.dll
-C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\TouchTracking.Forms.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Plugin.SimpleAudioPlayer.Abstractions.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Plugin.SimpleAudioPlayer.Abstractions.pdb
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Plugin.SimpleAudioPlayer.dll
@@ -513,6 +508,7 @@ C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Xamari
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Pong.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Pong.pdb
+C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\Pong.UWP.csprojAssemblyReference.cache
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\App.g.i.cs
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\App.g.cs
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\MainPage.g.i.cs

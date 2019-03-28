@@ -49,11 +49,9 @@ namespace Pong
 
         SKMatrix matrix = SKMatrix.MakeIdentity();
 
-        private float paddleX;
-        private float paddleY;
+        private float paddleX = (int)Application.Current.MainPage.Width / 2;
+        private float paddleY = (int)Application.Current.MainPage.Height - 200;
 
-        float padX = (float)Application.Current.MainPage.Height - 200;
-        float padY = (float)Application.Current.MainPage.Width / 2;
         int score = 0;
         private void CanvasView_PaintSurface(object sender, SKPaintSurfaceEventArgs e)
         {
@@ -64,6 +62,7 @@ namespace Pong
             //background colour
             canvas.Clear();
 
+            //output the score at the top of the game
             string str = "Score: " + score;
 
             // Create an SKPaint object to display the text
@@ -74,14 +73,14 @@ namespace Pong
 
             textPaint.TextSize = 35;
 
-            // And draw the text
+            // And draw the text onto the window
             canvas.DrawText(str, 50, 50, textPaint);
 
             //width and height of the window
             int width = e.Info.Width;
             int height = e.Info.Height;
 
-            #region ball
+            #region the code for ball
             //CODE FOR BALL
             SKPaint paint = new SKPaint
             {
@@ -128,6 +127,7 @@ namespace Pong
 
             if (moveUp)
             {
+                //Debug.WriteLine("All is geod!");
                 if (y <= 0)
                 {
                     y += speedY;
@@ -166,40 +166,32 @@ namespace Pong
             {
                 paddle = SKBitmap.Decode(stream);
             }
-            paddleX = width / 2;
-            paddleY = height - 100;
+            //paddleX = width / 2;
+            //paddleY = height - 100;
             canvas.SetMatrix(matrix);
             canvas.DrawBitmap(paddle, paddleX, paddleY);
+                //if (x > paddleX && paddleX < padX + paddle.Width && y > paddleY && paddleY < padY + paddle.Height)
 
-            // rect = matrix.MapRect(rect);
-            //System.Diagnostics.Debug.WriteLine(paddleX + " " + paddleY);
-
-//            if (x > paddleX && paddleX < padX + paddle.Width && y > paddleY && paddleY < padY + paddle.Height)
-            if(x > paddleX && x < paddleX + paddle.Width && y > paddleY && y < paddleY + paddle.Height)
+            if (moveDown)
             {
-                //var assembly2 = IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly;
-                //Stream audioStream = assembly2.GetManifestResourceStream("Pong.Assets.Sounds.bounce.wav");
+                // check is the ball collides with the paddle and if so,bounce back & increment score by 1
+                if(y >= paddleY && y <= paddleY + paddle.Height && x >= paddleX && x <= paddleX + paddle.Width)
+                {
 
-                //var bounce = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
-                //bounce.Load(audioStream);
+                    var assembly2 = IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly;
+                    Stream audioStream = assembly2.GetManifestResourceStream("Pong.Assets.Sounds.bounce.wav");
 
-//                if (moveDown)
-  //              {
+                    var bounce = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                    bounce.Load(audioStream);
+
                     score++;
                     moveUp = true;
                     moveDown = false;
                     y -= speedY;
 
-                  //  bounce.Play();
-                //}
-                //else
-                //{
-                //    moveUp = false;
-                //    moveDown = true;
-                //    y += speedY;
-                //}
+                    bounce.Play();
+                }
             }
-
         }
 
         // Touch information
@@ -233,6 +225,8 @@ namespace Pong
                         // Adjust the matrix for the new position
                         matrix.TransX += point.X - previousPoint.X;
                         previousPoint = point;
+                       // paddleX = matrix.TransX;
+                        //paddleY = matrix.TransY;
                     }
                     break;
 
@@ -241,9 +235,18 @@ namespace Pong
                     touchId = -1;
                     break;
             }// switch statement
+        }
 
-            //  paddleX = previousPoint.X + point.X;
-            // paddleY = previousPoint.Y + point.Y;
+        private void MoveLeftBtn_Clicked(object sender, EventArgs e)
+        {
+            matrix.TransX -= 20;
+            paddleX -= 20;
+        }
+
+        private void MoveRightBtn_Clicked(object sender, EventArgs e)
+        {
+            matrix.TransX += 20;
+            paddleX += 20;
         }
 
         //private void PanGestureRecognizer_PanUpdated(object sender, PanUpdatedEventArgs e)
