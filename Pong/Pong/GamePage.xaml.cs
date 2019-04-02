@@ -12,6 +12,7 @@ using SkiaSharp.Views.Forms;
 
 using System.Reflection;
 using System.IO;
+using System.Diagnostics;
 
 namespace Pong
 {
@@ -19,11 +20,12 @@ namespace Pong
     public partial class GamePage : ContentPage
     {
         private double windowHeight = Application.Current.MainPage.Height;
+        private bool _beginGame = true;
 
         public GamePage()
         {
             InitializeComponent();
-
+            
             Device.StartTimer(TimeSpan.FromSeconds(1f/60), () =>
             {
                 canvasView.InvalidateSurface();
@@ -37,8 +39,8 @@ namespace Pong
         int speedY = 2;
 
         //starting position of the ball
-        int x = 650;
-        int y = 100;
+        int x ;
+        int y ;
 
         //boolean variables for detecting the movement of the ball
         Boolean moveLeft = false;
@@ -49,8 +51,8 @@ namespace Pong
 
         SKMatrix matrix = SKMatrix.MakeIdentity();
 
-        private float paddleX = (int)Application.Current.MainPage.Width / 2;
-        private float paddleY = (int)Application.Current.MainPage.Height - 200;
+        private float paddleX;
+        private float paddleY;
 
         int score = 0;
         private void CanvasView_PaintSurface(object sender, SKPaintSurfaceEventArgs e)
@@ -80,7 +82,20 @@ namespace Pong
             int width = e.Info.Width;
             int height = e.Info.Height;
 
-            #region the code for ball
+            if(_beginGame)
+            {
+                Random random = new Random();
+
+                paddleX = width / 2;
+                paddleY = height - 100;
+
+                x = random.Next(0, width);
+                y = 100;
+
+                _beginGame = false;
+            }
+
+            #region code repainting and movement of the ball
             //CODE FOR BALL
             SKPaint paint = new SKPaint
             {
@@ -97,62 +112,8 @@ namespace Pong
             canvas.DrawCircle(x, y, 12, paint);
 
             // movement of the ball
-            if (moveDown)
-            {
-                if (y >= height)
-                {
-                    y -= speedY;
-                    moveDown = false;
-                    moveUp = true;
-                }
-                else
-                {
-                    y += speedY;
-                }
-            }
-
-            if (moveLeft)
-            {
-                if (x <= 0)
-                {
-                    x += speedX;
-                    moveLeft = false;
-                    moveRight = true;
-                }
-                else
-                {
-                    x -= speedX;
-                }
-            }
-
-            if (moveUp)
-            {
-                //Debug.WriteLine("All is geod!");
-                if (y <= 0)
-                {
-                    y += speedY;
-                    moveUp = false;
-                    moveDown = true;
-                }
-                else
-                {
-                    y -= speedY;
-                }
-            }
-
-            if (moveRight)
-            {
-                if (x >= width)
-                {
-                    x -= speedX;
-                    moveRight = false;
-                    moveLeft = true;
-                }
-                else
-                {
-                    x += speedX;
-                }
-            }
+            MoveBallVertically(height);
+            MoveBallHorizontally(width);
 
             canvas.Restore();
 
@@ -170,12 +131,12 @@ namespace Pong
             //paddleY = height - 100;
             canvas.SetMatrix(matrix);
             canvas.DrawBitmap(paddle, paddleX, paddleY);
-                //if (x > paddleX && paddleX < padX + paddle.Width && y > paddleY && paddleY < padY + paddle.Height)
 
             if (moveDown)
             {
                 // check is the ball collides with the paddle and if so,bounce back & increment score by 1
                 if(y >= paddleY && y <= paddleY + paddle.Height && x >= paddleX && x <= paddleX + paddle.Width)
+                //if(y >= paddleY && x >= paddleX && x <= paddleX + 170)
                 {
 
                     var assembly2 = IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly;
@@ -192,7 +153,70 @@ namespace Pong
                     bounce.Play();
                 }
             }
-        }
+        }// CanvasView_PaintSurface
+
+        private void MoveBallVertically(int height)
+        {
+            if (moveDown)
+            {
+                if (y >= height)
+                {
+                    y -= speedY;
+                    moveDown = false;
+                    moveUp = true;
+                }
+                else
+                {
+                    y += speedY;
+                }
+            }
+
+            if (moveUp)
+            {
+                if (y <= 0)
+                {
+                    y += speedY;
+                    moveUp = false;
+                    moveDown = true;
+                }
+                else
+                {
+                    y -= speedY;
+                }
+            }
+        } //MoveBallVertically
+
+        private void MoveBallHorizontally(int width)
+        {
+            if (moveLeft)
+            {
+                if (x <= 0)
+                {
+                    x += speedX;
+                    moveLeft = false;
+                    moveRight = true;
+                }
+                else
+                {
+                    x -= speedX;
+                }
+            }
+
+
+            if (moveRight)
+            {
+                if (x >= width)
+                {
+                    x -= speedX;
+                    moveRight = false;
+                    moveLeft = true;
+                }
+                else
+                {
+                    x += speedX;
+                }
+            }
+        }// MoveBallHorizontally
 
         // Touch information
         long touchId = -1;

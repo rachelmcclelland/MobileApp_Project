@@ -18,7 +18,6 @@ C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong\obj\Debug\netstandard2.0\Xaml
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\bin\Debug\netstandard2.0\Pong.deps.json
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\bin\Debug\netstandard2.0\Pong.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\bin\Debug\netstandard2.0\Pong.pdb
-C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\obj\Debug\netstandard2.0\Pong.csprojAssemblyReference.cache
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\obj\Debug\netstandard2.0\GamePage.xaml.g.cs
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\obj\Debug\netstandard2.0\MainPage.xaml.g.cs

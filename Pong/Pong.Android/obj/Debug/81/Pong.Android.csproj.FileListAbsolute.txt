@@ -81,4 +81,3 @@ C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\linksrc\
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.Android\bin\Debug\Pong.dll.mdb
 C:\Users\rache\Documents\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\linksrc\Pong.dll.mdb
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\bin\Debug\netstandard2.0\Pong.dll
-C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\linksrc\System.Data.pdb
