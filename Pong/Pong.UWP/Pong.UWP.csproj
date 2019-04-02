@@ -106,6 +106,7 @@
     <Content Include="Assets\bounce.wav" />
     <Content Include="Assets\Images\background.jpg" />
     <None Include="Assets\Images\ball.png" />
+    <Content Include="Assets\Images\mainpageImage.jpg" />
     <Content Include="Assets\Images\paddle.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
@@ -135,6 +136,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="background.jpg" />
+    <Content Include="mainpageImage.jpg" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>

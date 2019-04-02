@@ -571,8 +571,14 @@
     <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Images\background.jpg">
       <PackagePath>Assets\Images\background.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Images\mainpageImage.jpg">
+      <PackagePath>Assets\Images\mainpageImage.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\background.jpg">
       <PackagePath>background.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\mainpageImage.jpg">
+      <PackagePath>mainpageImage.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Images\paddle.png">
       <PackagePath>Assets\Images\paddle.png</PackagePath>

@@ -1,6 +1,7 @@
 WinMetadata\Windows.winmd
 Assets\bounce.wav
 Assets\Images\background.jpg
+Assets\Images\mainpageImage.jpg
 Assets\Images\paddle.png
 Assets\LargeTile.scale-100.png
 Assets\LargeTile.scale-200.png
@@ -33,4 +34,5 @@ background.jpg
 App.xbf
 MainPage.xbf
 Pong.UWP.xr.xml
+mainpageImage.jpg
 Properties\Default.rd.xml

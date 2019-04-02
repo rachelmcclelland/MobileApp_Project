@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-02T20:48:31.046</Modified>
+      <Modified>2019-04-02T21:01:11.161</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Pong.UWP.exe">
       <PackagePath>entrypoint\Pong.UWP.exe</PackagePath>
-      <Modified>2019-04-02T20:48:29.453</Modified>
+      <Modified>2019-04-02T21:01:08.975</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.1.5\runtimes\win10-x86\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
@@ -748,7 +748,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\bin\Debug\netstandard2.0\Pong.dll">
       <PackagePath>Pong.dll</PackagePath>
-      <Modified>2019-04-02T20:48:21.658</Modified>
+      <Modified>2019-04-02T21:00:58.256</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -762,9 +762,17 @@
       <PackagePath>Assets\Images\background.jpg</PackagePath>
       <Modified>2019-02-11T15:05:53.625</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Images\mainpageImage.jpg">
+      <PackagePath>Assets\Images\mainpageImage.jpg</PackagePath>
+      <Modified>2019-04-02T20:58:30.047</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\background.jpg">
       <PackagePath>background.jpg</PackagePath>
       <Modified>2019-03-29T12:45:05.640</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\mainpageImage.jpg">
+      <PackagePath>mainpageImage.jpg</PackagePath>
+      <Modified>2019-04-02T21:00:10.482</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\Assets\Images\paddle.png">
       <PackagePath>Assets\Images\paddle.png</PackagePath>
@@ -915,11 +923,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-04-02T20:48:29.210</Modified>
+      <Modified>2019-04-02T21:01:08.651</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-04-02T20:48:29.210</Modified>
+      <Modified>2019-04-02T21:01:08.651</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -931,11 +939,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-04-02T20:46:05.730</Modified>
+      <Modified>2019-04-02T21:01:10.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Core\Pong.UWP.exe">
       <PackagePath>Pong.UWP.exe</PackagePath>
-      <Modified>2019-04-02T20:48:31.034</Modified>
+      <Modified>2019-04-02T21:01:11.151</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
