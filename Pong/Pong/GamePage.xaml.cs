@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,7 +8,6 @@ using SkiaSharp.Views.Forms;
 
 using System.Reflection;
 using System.IO;
-using System.Diagnostics;
 
 namespace Pong
 {
@@ -273,7 +268,8 @@ namespace Pong
 
         private void ExitGameBtn_Clicked(object sender, EventArgs e)
         {
-
+            Environment.Exit(0);
+            //Process.GetCurrentProcess().Kill();
         }
 
         // Touch information
