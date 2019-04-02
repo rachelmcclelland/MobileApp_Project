@@ -12,12 +12,14 @@
   <ItemGroup>
     <None Remove="Assets\Images\background.jpg" />
     <None Remove="Assets\Images\leftarrow.png" />
+    <None Remove="Assets\Images\mainpageImage.jpg" />
     <None Remove="Assets\Images\paddle.png" />
     <None Remove="Assets\Sounds\bounce.wav" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Assets\Images\leftarrow.png" />
+    <EmbeddedResource Include="Assets\Images\mainpageImage.jpg" />
     <EmbeddedResource Include="Assets\Images\paddle.png" />
   </ItemGroup>
 

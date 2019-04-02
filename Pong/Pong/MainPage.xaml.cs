@@ -14,7 +14,7 @@ namespace Pong
         public MainPage()
         {
             InitializeComponent();
-            BackgroundImage = "Assets/Images/background.jpg";
+            BackgroundImage = "Assets/Images/mainpageImage.jpg";
             SetDefaultSettings();
         }
 

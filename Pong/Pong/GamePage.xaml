@@ -22,6 +22,8 @@
             <Button x:Name="playAgainBtn" Text="Play Again!" FontSize="Medium" TextColor="White"
                     BackgroundColor="Gray" IsVisible="False" Clicked="PlayAgainBtn_Clicked"
                     Margin="2, 0"/>
+            <Button x:Name="exitGameBtn" Text="Exit" FontSize="Large" TextColor="White"
+                    BackgroundColor="Gray" IsVisible="False" Clicked="ExitGameBtn_Clicked"/>
             <Button x:Name="moveRightBtn" Text="Right" TextColor="White" BackgroundColor="Gray" 
                     HorizontalOptions="End" Clicked="MoveRightBtn_Clicked" Margin="5, 0" ></Button>
         </StackLayout>

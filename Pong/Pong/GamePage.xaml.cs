@@ -237,6 +237,7 @@ namespace Pong
                 speedY = 0;
 
                 playAgainBtn.IsVisible = true;
+                exitGameBtn.IsVisible = true;
                 //y = 0;
                     // THIS IS NOT WORKING
                     // CREATE TWO INVISIBLE BUTTONS AND WHEN THE USER LOOSES THE GAME
@@ -245,6 +246,35 @@ namespace Pong
             }       
         }// CheckForGameOver
 
+        private void MoveLeftBtn_Clicked(object sender, EventArgs e)
+        {
+            matrix.TransX -= 20;
+            paddleX -= 20;
+        }
+
+        private void MoveRightBtn_Clicked(object sender, EventArgs e)
+        {
+            matrix.TransX += 20;
+            paddleX += 20;
+        }
+
+        private void PlayAgainBtn_Clicked(object sender, EventArgs e)
+        {
+            y = 0;
+            speedX = 2;
+            speedY = 2;
+            score = 0;
+
+            moveLeftBtn.IsVisible = true;
+            moveRightBtn.IsVisible = true;
+            playAgainBtn.IsVisible = false;
+            exitGameBtn.IsVisible = false;
+        }
+
+        private void ExitGameBtn_Clicked(object sender, EventArgs e)
+        {
+
+        }
 
         // Touch information
         long touchId = -1;
@@ -289,29 +319,6 @@ namespace Pong
             }// switch statement
         }
 
-        private void MoveLeftBtn_Clicked(object sender, EventArgs e)
-        {
-            matrix.TransX -= 20;
-            paddleX -= 20;
-        }
-
-        private void MoveRightBtn_Clicked(object sender, EventArgs e)
-        {
-            matrix.TransX += 20;
-            paddleX += 20;
-        }
-
-        private void PlayAgainBtn_Clicked(object sender, EventArgs e)
-        {
-            y = 0;
-            speedX = 2;
-            speedY = 2;
-            score = 0;
-
-            moveLeftBtn.IsVisible = true;
-            moveRightBtn.IsVisible = true;
-            playAgainBtn.IsVisible = false;
-        }
 
         //private void PanGestureRecognizer_PanUpdated(object sender, PanUpdatedEventArgs e)
         //{

@@ -1,3 +1,6 @@
+Pong.Droid.MainActivity, Pong.Android;md565250ecb473201a9d7d12186dcf8af02.MainActivity
+Pong.Droid.MainActivity;md565250ecb473201a9d7d12186dcf8af02.MainActivity
+pong.droid.MainActivity;md565250ecb473201a9d7d12186dcf8af02.MainActivity
 SkiaSharp.Views.Android.GLTextureView, SkiaSharp.Views.Android;md5f24c356e1394bd37d0c871b61b28ee61.GLTextureView
 SkiaSharp.Views.Android.GLTextureView;md5f24c356e1394bd37d0c871b61b28ee61.GLTextureView
 skiasharp.views.android.GLTextureView;md5f24c356e1394bd37d0c871b61b28ee61.GLTextureView
