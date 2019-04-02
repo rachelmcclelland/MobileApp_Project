@@ -16,11 +16,14 @@
         </skia:SKCanvasView>
 
         <!--Touch="CanvasView_Touch" EnableTouchEvents="True"-->
-        <StackLayout x:Name="movementBtns" Grid.Row="1" Orientation="Horizontal">
-            <Button x:Name="moveLeftBtn" Text="Left" TextColor="White" BackgroundColor="Blue" Clicked="MoveLeftBtn_Clicked" WidthRequest="50"
-                    HorizontalOptions="Center"></Button>
-            <Button x:Name="moveRightBtn" Text="Right" TextColor="White" BackgroundColor="Blue" 
-                    HorizontalOptions="Center" Clicked="MoveRightBtn_Clicked" ></Button>
+        <StackLayout x:Name="movementBtns" Grid.Row="1" Orientation="Horizontal" HeightRequest="50">
+            <Button x:Name="moveLeftBtn" Text="Left" TextColor="White" BackgroundColor="Gray" Clicked="MoveLeftBtn_Clicked" WidthRequest="50"
+                    HorizontalOptions="Start" Margin="5, 0"></Button>
+            <Button x:Name="playAgainBtn" Text="Play Again!" FontSize="Medium" TextColor="White"
+                    BackgroundColor="Gray" IsVisible="False" Clicked="PlayAgainBtn_Clicked"
+                    Margin="2, 0"/>
+            <Button x:Name="moveRightBtn" Text="Right" TextColor="White" BackgroundColor="Gray" 
+                    HorizontalOptions="End" Clicked="MoveRightBtn_Clicked" Margin="5, 0" ></Button>
         </StackLayout>
 
 

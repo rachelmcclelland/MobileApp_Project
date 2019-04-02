@@ -17,7 +17,6 @@
 
         <StackLayout Grid.Row="1">
 
-            <!--<Label Text="Click below to Play!" FontSize="Medium" TextColor="Aquamarine"/>-->
             <StackLayout x:Name="slName" Orientation="Horizontal">
                 <Label Text="Name: " TextColor="White" FontSize="Medium" />
                 <Entry x:Name="entName" Placeholder="Enter your name" TextChanged="Name_TextChanged"/>

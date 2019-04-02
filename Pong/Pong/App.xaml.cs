@@ -7,6 +7,7 @@ namespace Pong
 {
     public partial class App : Application
     {
+        //public static int x;
         public App()
         {
             InitializeComponent();

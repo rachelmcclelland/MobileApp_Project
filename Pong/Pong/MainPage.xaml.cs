@@ -15,10 +15,10 @@ namespace Pong
         {
             InitializeComponent();
             BackgroundImage = "Assets/Images/background.jpg";
-            setDefaultSettings();
+            SetDefaultSettings();
         }
 
-        private void setDefaultSettings()
+        private void SetDefaultSettings()
         {
             bN = false;
         }

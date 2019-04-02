@@ -27,9 +27,14 @@ namespace Pong
         Boolean moveUp = false;
         Boolean moveDown = true;
 
+        //starting position of the ball
+        int x;
+        int y;
+
         public GamePage()
         {
             InitializeComponent();
+            y = 0;
             
             Device.StartTimer(TimeSpan.FromSeconds(1f/60), () =>
             {
@@ -42,10 +47,6 @@ namespace Pong
         //speed the ball is going
         int speedX = 2;
         int speedY = 2;
-
-        //starting position of the ball
-        int x ;
-        int y ;
 
         private SKBitmap paddle;
 
@@ -90,7 +91,6 @@ namespace Pong
                 paddleY = height - 100;
 
                 x = random.Next(0, width);
-                y = 100;
 
                 _beginGame = false;
             }
@@ -133,7 +133,8 @@ namespace Pong
             canvas.DrawBitmap(paddle, paddleX, paddleY);
 
             CheckForCollision();
- 
+            CheckForGameOver(height);
+            
         }// CanvasView_PaintSurface
 
         private void MoveBallVertically(int height)
@@ -222,7 +223,27 @@ namespace Pong
                     bounce.Play();
                 }
             }
+            
         }// CheckForCollision
+
+        private void CheckForGameOver(int height)
+        {
+
+            if(y > height - 100)
+            {
+                moveLeftBtn.IsVisible = false;
+                moveRightBtn.IsVisible = false;
+                speedX = 0;
+                speedY = 0;
+
+                playAgainBtn.IsVisible = true;
+                //y = 0;
+                    // THIS IS NOT WORKING
+                    // CREATE TWO INVISIBLE BUTTONS AND WHEN THE USER LOOSES THE GAME
+                    // STOP THE MOVEMENT OF THE BALL AND MAKE THE BUTTONS VISIBLE (ONE FOR PLAY AGAIN AND ONE FOR EXIT)
+                    // THE WHETHER EACH BUTTON IS CLICKED, SET Y BACK TO 0 FOR PLAY AGAIN AND CLOSE THE GAME FOR EXIT.
+            }       
+        }// CheckForGameOver
 
 
         // Touch information
@@ -278,6 +299,18 @@ namespace Pong
         {
             matrix.TransX += 20;
             paddleX += 20;
+        }
+
+        private void PlayAgainBtn_Clicked(object sender, EventArgs e)
+        {
+            y = 0;
+            speedX = 2;
+            speedY = 2;
+            score = 0;
+
+            moveLeftBtn.IsVisible = true;
+            moveRightBtn.IsVisible = true;
+            playAgainBtn.IsVisible = false;
         }
 
         //private void PanGestureRecognizer_PanUpdated(object sender, PanUpdatedEventArgs e)
