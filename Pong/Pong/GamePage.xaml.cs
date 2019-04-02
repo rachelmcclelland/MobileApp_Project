@@ -19,8 +19,13 @@ namespace Pong
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GamePage : ContentPage
     {
-        private double windowHeight = Application.Current.MainPage.Height;
         private bool _beginGame = true;
+
+        //boolean variables for detecting the movement of the ball
+        Boolean moveLeft = false;
+        Boolean moveRight = true;
+        Boolean moveUp = false;
+        Boolean moveDown = true;
 
         public GamePage()
         {
@@ -42,11 +47,6 @@ namespace Pong
         int x ;
         int y ;
 
-        //boolean variables for detecting the movement of the ball
-        Boolean moveLeft = false;
-        Boolean moveRight = true;
-        Boolean moveUp = false;
-        Boolean moveDown = true;
         private SKBitmap paddle;
 
         SKMatrix matrix = SKMatrix.MakeIdentity();
@@ -132,27 +132,8 @@ namespace Pong
             canvas.SetMatrix(matrix);
             canvas.DrawBitmap(paddle, paddleX, paddleY);
 
-            if (moveDown)
-            {
-                // check is the ball collides with the paddle and if so,bounce back & increment score by 1
-                if(y >= paddleY && y <= paddleY + paddle.Height && x >= paddleX && x <= paddleX + paddle.Width)
-                //if(y >= paddleY && x >= paddleX && x <= paddleX + 170)
-                {
-
-                    var assembly2 = IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly;
-                    Stream audioStream = assembly2.GetManifestResourceStream("Pong.Assets.Sounds.bounce.wav");
-
-                    var bounce = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
-                    bounce.Load(audioStream);
-
-                    score++;
-                    moveUp = true;
-                    moveDown = false;
-                    y -= speedY;
-
-                    bounce.Play();
-                }
-            }
+            CheckForCollision();
+ 
         }// CanvasView_PaintSurface
 
         private void MoveBallVertically(int height)
@@ -217,6 +198,32 @@ namespace Pong
                 }
             }
         }// MoveBallHorizontally
+
+        private void CheckForCollision()
+        {
+            if (moveDown)
+            {
+                // check is the ball collides with the paddle and if so,bounce back & increment score by 1
+                if (y >= paddleY && y <= paddleY + paddle.Height && x >= paddleX && x <= paddleX + paddle.Width)
+                //if(y >= paddleY && x >= paddleX && x <= paddleX + 170)
+                {
+
+                    var assembly2 = IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly;
+                    Stream audioStream = assembly2.GetManifestResourceStream("Pong.Assets.Sounds.bounce.wav");
+
+                    var bounce = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                    bounce.Load(audioStream);
+
+                    score++;
+                    moveUp = true;
+                    moveDown = false;
+                    y -= speedY;
+
+                    bounce.Play();
+                }
+            }
+        }// CheckForCollision
+
 
         // Touch information
         long touchId = -1;
