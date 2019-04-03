@@ -108,6 +108,7 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "Pong.Android.dll" comes first in this list. */
 		"Pong.Android.dll",
 		"FormsViewGroup.dll",
+		"Newtonsoft.Json.dll",
 		"Plugin.SimpleAudioPlayer.Abstractions.dll",
 		"Plugin.SimpleAudioPlayer.dll",
 		"Pong.dll",

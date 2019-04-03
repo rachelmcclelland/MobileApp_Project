@@ -3,6 +3,7 @@ C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\and
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\Java.Interop.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\Mono.Android.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\mscorlib.dll
+C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\Newtonsoft.Json.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\Plugin.SimpleAudioPlayer.Abstractions.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\Plugin.SimpleAudioPlayer.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\Pong.dll
@@ -39,14 +40,14 @@ C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\and
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\System.Net.Http.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\System.Runtime.Serialization.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\System.ServiceModel.Internals.dll
-C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\System.Runtime.dll
-C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\System.ComponentModel.Composition.dll
-C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\System.IO.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\netstandard.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\System.Data.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\System.Numerics.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\System.Transactions.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\System.IO.Compression.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\System.IO.Compression.FileSystem.dll
+C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\System.ComponentModel.Composition.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\System.Web.Services.dll
+C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\System.Runtime.dll
+C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\System.IO.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.Android\obj\Debug\81\android\assets\Mono.Security.dll

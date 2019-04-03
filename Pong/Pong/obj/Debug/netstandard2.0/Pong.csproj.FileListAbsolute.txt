@@ -24,8 +24,7 @@ C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\obj\Debug\netstandard2.0
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\obj\Debug\netstandard2.0\Pong.csproj.CoreCompileInputs.cache
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\obj\Debug\netstandard2.0\Pong.AssemblyInfoInputs.cache
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\obj\Debug\netstandard2.0\Pong.AssemblyInfo.cs
-C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\obj\Debug\netstandard2.0\Pong.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\obj\Debug\netstandard2.0\Pong.pdb
-C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\obj\Debug\netstandard2.0\GameOver.xaml.g.cs
+C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong\obj\Debug\netstandard2.0\Pong.csprojAssemblyReference.cache

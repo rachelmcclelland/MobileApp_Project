@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -7,7 +8,9 @@ namespace Pong
 {
     public partial class App : Application
     {
-        //public static int x;
+        public static string pName;
+        public static ObservableCollection<Player> players;
+
         public App()
         {
             InitializeComponent();

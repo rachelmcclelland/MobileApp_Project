@@ -8,6 +8,8 @@ using SkiaSharp.Views.Forms;
 
 using System.Reflection;
 using System.IO;
+using System.Collections.ObjectModel;
+using MyUtility;
 
 namespace Pong
 {
@@ -268,8 +270,21 @@ namespace Pong
 
         private void ExitGameBtn_Clicked(object sender, EventArgs e)
         {
+            UpdatePlayerDetails();
             Environment.Exit(0);
             //Process.GetCurrentProcess().Kill();
+        }
+
+        private void UpdatePlayerDetails()
+        {
+            foreach(var player in App.players)
+            {
+                if(player.Name == App.pName)
+                {
+                    player.Score = score;
+                    Utils.SavePlayerToFile(App.players);
+                }
+            }
         }
 
         // Touch information
