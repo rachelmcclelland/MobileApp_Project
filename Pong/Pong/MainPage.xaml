@@ -15,8 +15,8 @@
             <StackLayout x:Name="slName" Orientation="Horizontal">
                 <Label Text="Name: " TextColor="White" FontSize="Medium" />
                 <Entry x:Name="entName" Placeholder="Enter your name" TextChanged="Name_TextChanged"/>
-                <Button x:Name="save" Text="Save Player" BackgroundColor="Gray" TextColor="White" Clicked="Save_Clicked"
-                        IsEnabled="False"/>
+                <!--<Button x:Name="save" Text="Save Player" BackgroundColor="Gray" TextColor="White" Clicked="Save_Clicked"
+                        IsEnabled="False"/>-->
             </StackLayout>
 
 

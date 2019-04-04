@@ -30,6 +30,7 @@ namespace Pong
 
         private void GamePage_Clicked(object sender, EventArgs e)
         {
+            CheckIfPlayerExists(entName.Text);
             Navigation.PushAsync(new GamePage());
         }
 
@@ -43,13 +44,14 @@ namespace Pong
             else
             {
                 App.pName = entName.Text;
-                save.IsEnabled = true;
+                //save.IsEnabled = true;
+                bN = true;
             }
 
-            //if (bN)
-            //{
-            //    playBtn.IsEnabled = true;
-            //}
+            if (bN)
+            {
+                playBtn.IsEnabled = true;
+            }
 
         }
 
@@ -67,6 +69,7 @@ namespace Pong
                     player.Score = 0;
                     App.players.Add(player);
                     Utils.SavePlayerToFile(App.players);
+                    break;
                 }
             }
         }

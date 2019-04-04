@@ -283,6 +283,7 @@ namespace Pong
                 {
                     player.Score = score;
                     Utils.SavePlayerToFile(App.players);
+                    break;
                 }
             }
         }
