@@ -8,7 +8,6 @@ using SkiaSharp.Views.Forms;
 
 using System.Reflection;
 using System.IO;
-using System.Collections.ObjectModel;
 using MyUtility;
 
 namespace Pong
@@ -16,6 +15,7 @@ namespace Pong
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GamePage : ContentPage
     {
+
         private bool _beginGame = true;
 
         //boolean variables for detecting the movement of the ball
@@ -31,8 +31,8 @@ namespace Pong
         public GamePage()
         {
             InitializeComponent();
-            y = 0;
             
+            //timer to get the canvas to keep redrawing itself
             Device.StartTimer(TimeSpan.FromSeconds(1f/60), () =>
             {
                 canvasView.InvalidateSurface();
@@ -45,21 +45,27 @@ namespace Pong
         int speedX = 2;
         int speedY = 2;
 
+        // create a new instance of SKBitmap to create the paddle
         private SKBitmap paddle;
 
         SKMatrix matrix = SKMatrix.MakeIdentity();
 
+        // variables for x and y position of the paddle
         private float paddleX;
         private float paddleY;
 
+        //the initial score
         int score = 0;
+
         private void CanvasView_PaintSurface(object sender, SKPaintSurfaceEventArgs e)
         {
+            // Games background image
             BackgroundImage = "Assets/Images/background.jpg";
+
             SKSurface surface = e.Surface;
             SKCanvas canvas = surface.Canvas;
 
-            //background colour
+            //clear the canvas
             canvas.Clear();
 
             //output the score at the top of the game
@@ -80,20 +86,26 @@ namespace Pong
             int width = e.Info.Width;
             int height = e.Info.Height;
 
+            //if its the start of the game
             if(_beginGame)
             {
                 Random random = new Random();
 
+                //set the paddles x and y co ords
                 paddleX = width / 2;
                 paddleY = height - 100;
 
+                // set the starting position of the ball to be random
+                // between 0 and the width of the canvas
                 x = random.Next(0, width);
 
+                // set _beginGame to false so that this is function is not entered again
                 _beginGame = false;
             }
 
             #region code repainting and movement of the ball
             //CODE FOR BALL
+            // Create an SKPaint object to make outer ball
             SKPaint paint = new SKPaint
             {
                 Style = SKPaintStyle.Stroke,
@@ -101,9 +113,11 @@ namespace Pong
                 StrokeWidth = 8
             };
 
+            // draw the circle onto the canvas with a radius of 12 on given x, y co ords
             canvas.Save();
             canvas.DrawCircle(x, y, 12, paint);
 
+            //create the inner ball and draw it onto the canvas
             paint.Style = SKPaintStyle.Fill;
             paint.Color = SKColors.Blue;
             canvas.DrawCircle(x, y, 12, paint);
@@ -112,11 +126,13 @@ namespace Pong
             MoveBallVertically(height);
             MoveBallHorizontally(width);
 
+            // restore the state of the canvas
             canvas.Restore();
 
             #endregion
 
             //CODE FOR PADDLE
+            // get the paddles image from the shared library
             string resourceID = "Pong.Assets.Images.paddle.png";
             Assembly assembly = GetType().GetTypeInfo().Assembly;
 
@@ -124,41 +140,49 @@ namespace Pong
             {
                 paddle = SKBitmap.Decode(stream);
             }
-            //paddleX = width / 2;
-            //paddleY = height - 100;
+
             canvas.SetMatrix(matrix);
+
+            // add the paddle to the canvas
             canvas.DrawBitmap(paddle, paddleX, paddleY);
 
+            // check if collision has occured
             CheckForCollision();
+
+            //check if the ball misses the paddle
             CheckForGameOver(height);
             
         }// CanvasView_PaintSurface
 
         private void MoveBallVertically(int height)
         {
+            //if the ball is moving down
             if (moveDown)
             {
+                // if it hits the bottom of the window, move back upwards
                 if (y >= height)
                 {
                     y -= speedY;
                     moveDown = false;
                     moveUp = true;
                 }
-                else
+                else // keep moving down
                 {
                     y += speedY;
                 }
             }
 
+            // if the ball is moving upwards
             if (moveUp)
             {
+                // if y hits the top of the window, bounce the ball back down
                 if (y <= 0)
                 {
                     y += speedY;
                     moveUp = false;
                     moveDown = true;
                 }
-                else
+                else // keep the ball moving upwards
                 {
                     y -= speedY;
                 }
@@ -167,30 +191,34 @@ namespace Pong
 
         private void MoveBallHorizontally(int width)
         {
+            // if the ball if moving left
             if (moveLeft)
             {
+                // if the x co ord of the ball hits the left side of the window, 
+                // bounce the ball to the right
                 if (x <= 0)
                 {
                     x += speedX;
                     moveLeft = false;
                     moveRight = true;
                 }
-                else
+                else // keep moving left
                 {
                     x -= speedX;
                 }
             }
 
-
+            // if the ball is moving right
             if (moveRight)
             {
+                // if the ball hits the right side of the window, bounce the ball left
                 if (x >= width)
                 {
                     x -= speedX;
                     moveRight = false;
                     moveLeft = true;
                 }
-                else
+                else // else keep moving right
                 {
                     x += speedX;
                 }
@@ -199,24 +227,33 @@ namespace Pong
 
         private void CheckForCollision()
         {
+            //if the ball is moving down, check for a collision
             if (moveDown)
             {
                 // check is the ball collides with the paddle and if so,bounce back & increment score by 1
                 if (y >= paddleY && y <= paddleY + paddle.Height && x >= paddleX && x <= paddleX + paddle.Width)
                 //if(y >= paddleY && x >= paddleX && x <= paddleX + 170)
                 {
-
+                    // if a collision has occurred, find the sound in the shared library
                     var assembly2 = IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly;
                     Stream audioStream = assembly2.GetManifestResourceStream("Pong.Assets.Sounds.bounce.wav");
 
+                    // and load it in so thats it is ready to be played
                     var bounce = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
                     bounce.Load(audioStream);
 
+                    // increase the score by 1
                     score++;
+                    
+                    // set moveUp to true so when the canvas goes around again, it know to send 
+                    // the ball upwards and not downwards
                     moveUp = true;
                     moveDown = false;
+
+                    // subtract the speed from the ball to start it moving upwards again
                     y -= speedY;
 
+                    //play the sound
                     bounce.Play();
                 }
             }
@@ -225,68 +262,89 @@ namespace Pong
 
         private void CheckForGameOver(int height)
         {
-
+            // if the y co ordinate is greater than where the paddle is sitting,
+            // then game is over
             if(y > height - 100)
             {
+                // hide the move buttons
                 moveLeftBtn.IsVisible = false;
                 moveRightBtn.IsVisible = false;
+
+                // stop the movement of the ball
                 speedX = 0;
                 speedY = 0;
 
+                // show the buttons that allow the user to pick if they want to play
+                // again or exit
                 playAgainBtn.IsVisible = true;
                 exitGameBtn.IsVisible = true;
-                //y = 0;
-                    // THIS IS NOT WORKING
-                    // CREATE TWO INVISIBLE BUTTONS AND WHEN THE USER LOOSES THE GAME
-                    // STOP THE MOVEMENT OF THE BALL AND MAKE THE BUTTONS VISIBLE (ONE FOR PLAY AGAIN AND ONE FOR EXIT)
-                    // THE WHETHER EACH BUTTON IS CLICKED, SET Y BACK TO 0 FOR PLAY AGAIN AND CLOSE THE GAME FOR EXIT.
             }       
         }// CheckForGameOver
 
         private void MoveLeftBtn_Clicked(object sender, EventArgs e)
         {
+            // when the left button is clicked, decrease the x position of the paddle
+            // so that it moves left
             matrix.TransX -= 20;
             paddleX -= 20;
-        }
+        }// MoveLeftBtn_Clicked
 
         private void MoveRightBtn_Clicked(object sender, EventArgs e)
         {
+            // if the right button is clicked, increase the x position of the paddle,
+            // which moves the ball right
             matrix.TransX += 20;
             paddleX += 20;
-        }
+        }// MoveRightBtn_Clicked
 
         private void PlayAgainBtn_Clicked(object sender, EventArgs e)
         {
+            // when the user clicks that they want to play again, this method will be called
+
+            // set y back to 0, so ball is at top of the window
             y = 0;
+
+            // reset the speed of the ball to make is move again
             speedX = 2;
             speedY = 2;
+
+            // reset score back to 0
             score = 0;
 
+            // make the movement buttons visible again
             moveLeftBtn.IsVisible = true;
             moveRightBtn.IsVisible = true;
+
+            // and the options button hidden
             playAgainBtn.IsVisible = false;
             exitGameBtn.IsVisible = false;
         }
 
         private void ExitGameBtn_Clicked(object sender, EventArgs e)
         {
+            // if the user decides they want to exit the game,
+            // their details are saved to the file and the game is exited
             UpdatePlayerDetails();
             Environment.Exit(0);
-            //Process.GetCurrentProcess().Kill();
-        }
+            //Process.GetCurrentProcess().Kill(); // another way to end the game
+        }// ExitGameBtn_Clicked
 
         private void UpdatePlayerDetails()
         {
+            // loop through the playerDetails file to find the name of the
+            // player thats just after exiting the game
             foreach(var player in App.players)
             {
                 if(player.Name == App.pName)
                 {
+                    // when the player is found, update that players score and 
+                    // save the player to the file
                     player.Score = score;
                     Utils.SavePlayerToFile(App.players);
                     break;
                 }
             }
-        }
+        } // UpdatePlayerDetails
 
         // Touch information
         long touchId = -1;
