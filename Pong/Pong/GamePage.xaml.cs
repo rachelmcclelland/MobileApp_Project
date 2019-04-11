@@ -242,7 +242,7 @@ namespace Pong
                 var pX = paddleX + paddle.Width;
                 var pY = paddleY + paddle.Height;
                 // check is the ball collides with the paddle and if so,bounce back & increment score by 1
-                if (y >= (height - 100 - paddle.Height) && x >= paddleX && x <= paddleX + paddle.Width + 25)
+                if (y >= (height - 110) && x >= paddleX && x <= paddleX + paddle.Width)
                 //if(y >= paddleY && x >= paddleX && x <= paddleX + 170)
                 {
 
@@ -308,7 +308,7 @@ namespace Pong
             // when the left button is clicked, decrease the x position of the paddle
             // so that it moves left
             matrix.TransX -= 20;
-            paddleX -= 20;
+            paddleX -= 55;
         }// MoveLeftBtn_Clicked
 
         private void MoveRightBtn_Clicked(object sender, EventArgs e)
@@ -316,7 +316,7 @@ namespace Pong
             // if the right button is clicked, increase the x position of the paddle,
             // which moves the ball right
             matrix.TransX += 20;
-            paddleX += 20;
+            paddleX += 55;
         }// MoveRightBtn_Clicked
 
         private void PlayAgainBtn_Clicked(object sender, EventArgs e)

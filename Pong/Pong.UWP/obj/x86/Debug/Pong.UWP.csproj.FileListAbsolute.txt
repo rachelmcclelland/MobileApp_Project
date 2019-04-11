@@ -326,6 +326,8 @@ C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\AppxMa
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Core\AppxManifest.xml
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Core\Pong.UWP.exe
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Pong.UWP.build.appxrecipe
+C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Newtonsoft.Json.pdb
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\clrcompression.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Microsoft.CSharp.dll
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Microsoft.VisualBasic.dll
@@ -630,5 +632,3 @@ C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\Plugin
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\Xamarin.Forms.Platform.UAP.pri.xml
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636758552200000000.json
-C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Newtonsoft.Json.dll
-C:\Users\rache\Documents\GMIT\MobileApp2\Pong\Pong\Pong.UWP\bin\x86\Debug\Newtonsoft.Json.pdb
