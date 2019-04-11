@@ -7,7 +7,8 @@
  
     <Grid x:Name="board">
         <Grid.RowDefinitions>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -16,7 +17,10 @@
         </skia:SKCanvasView>
 
         <!--Touch="CanvasView_Touch" EnableTouchEvents="True"-->
-        <StackLayout x:Name="movementBtns" Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Center" HeightRequest="50">
+        <StackLayout Grid.Row="1" Orientation="Horizontal">
+            <Label x:Name="detailsLbl" Text= "" IsVisible="False" TextColor="White" FontSize="Medium"/>
+        </StackLayout>
+        <StackLayout x:Name="movementBtns" Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Center" HeightRequest="50">
             <Button x:Name="moveLeftBtn" Text="Left" TextColor="White" BackgroundColor="Gray" Clicked="MoveLeftBtn_Clicked" WidthRequest="50"
                     HorizontalOptions="Start" Margin="5, 0"></Button>
             <Button x:Name="playAgainBtn" Text="Play Again!" FontSize="Medium" TextColor="White"

@@ -16,6 +16,8 @@ namespace Pong
     public partial class GamePage : ContentPage
     {
 
+        private int windowWidth = (int) Application.Current.MainPage.Width;
+        private int windowHeight = (int)Application.Current.MainPage.Height;
         private bool _beginGame = true;
 
         //boolean variables for detecting the movement of the ball
@@ -92,12 +94,13 @@ namespace Pong
                 Random random = new Random();
 
                 //set the paddles x and y co ords
-                paddleX = width / 2;
+                 paddleX = windowWidth / 2;
+                //paddleX = 0;
                 paddleY = height - 100;
 
                 // set the starting position of the ball to be random
                 // between 0 and the width of the canvas
-                x = random.Next(0, width);
+                x = random.Next(0, windowWidth);
 
                 // set _beginGame to false so that this is function is not entered again
                 _beginGame = false;
@@ -123,8 +126,8 @@ namespace Pong
             canvas.DrawCircle(x, y, 12, paint);
 
             // movement of the ball
-            MoveBallVertically(height);
-            MoveBallHorizontally(width);
+            MoveBallVertically(windowHeight);
+            MoveBallHorizontally(windowWidth);
 
             // restore the state of the canvas
             canvas.Restore();
@@ -147,10 +150,10 @@ namespace Pong
             canvas.DrawBitmap(paddle, paddleX, paddleY);
 
             // check if collision has occured
-            CheckForCollision();
+            CheckForCollision(height);
 
             //check if the ball misses the paddle
-            CheckForGameOver(height);
+            //CheckForGameOver(height);
             
         }// CanvasView_PaintSurface
 
@@ -225,15 +228,24 @@ namespace Pong
             }
         }// MoveBallHorizontally
 
-        private void CheckForCollision()
+        private void CheckForCollision(int height)
         {
             //if the ball is moving down, check for a collision
             if (moveDown)
             {
+                var w = windowWidth;
+                var h = windowHeight;
+                var xBall = x;
+                var yBall = y;
+                var padX = paddleX;
+                var padY = paddleY;
+                var pX = paddleX + paddle.Width;
+                var pY = paddleY + paddle.Height;
                 // check is the ball collides with the paddle and if so,bounce back & increment score by 1
-                if (y >= paddleY && y <= paddleY + paddle.Height && x >= paddleX && x <= paddleX + paddle.Width)
+                if (y >= (height - 100 - paddle.Height) && x >= paddleX && x <= paddleX + paddle.Width + 25)
                 //if(y >= paddleY && x >= paddleX && x <= paddleX + 170)
                 {
+
                     // if a collision has occurred, find the sound in the shared library
                     var assembly2 = IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly;
                     Stream audioStream = assembly2.GetManifestResourceStream("Pong.Assets.Sounds.bounce.wav");
@@ -253,8 +265,15 @@ namespace Pong
                     // subtract the speed from the ball to start it moving upwards again
                     y -= speedY;
 
-                    //play the sound
-                    bounce.Play();
+                    try
+                    {
+                        //play the sound
+                        bounce.Play();
+                    }
+                    catch
+                    {
+
+                    }
                 }
             }
             
@@ -264,8 +283,8 @@ namespace Pong
         {
             // if the y co ordinate is greater than where the paddle is sitting,
             // then game is over
-            if(y > height - 100)
-            {
+            if(y >312)
+            {   
                 // hide the move buttons
                 moveLeftBtn.IsVisible = false;
                 moveRightBtn.IsVisible = false;
@@ -278,6 +297,9 @@ namespace Pong
                 // again or exit
                 playAgainBtn.IsVisible = true;
                 exitGameBtn.IsVisible = true;
+
+                detailsLbl.IsVisible = true;
+                detailsLbl.Text = App.pName + ", your score was: " + score;
             }       
         }// CheckForGameOver
 
@@ -318,6 +340,8 @@ namespace Pong
             // and the options button hidden
             playAgainBtn.IsVisible = false;
             exitGameBtn.IsVisible = false;
+
+            detailsLbl.IsVisible = false;
         }
 
         private void ExitGameBtn_Clicked(object sender, EventArgs e)
@@ -388,28 +412,6 @@ namespace Pong
                     break;
             }// switch statement
         }
-
-
-        //private void PanGestureRecognizer_PanUpdated(object sender, PanUpdatedEventArgs e)
-        //{
-        //    var paddle = (Image)sender;
-
-        //    if (e.StatusType == GestureStatus.Started)
-        //    {
-        //        _startTranslationX = paddle.TranslationX;
-        //        _startTranslationY = paddle.TranslationY;
-        //    }
-        //    else if (e.StatusType == GestureStatus.Running)
-        //    {
-        //        paddle.TranslationX = _startTranslationX + e.TotalX;
-        //        paddle.TranslationY = _startTranslationY + e.TotalY;
-        //    }
-        //    else if (e.StatusType == GestureStatus.Completed)
-        //    {
-        //        paddle.TranslationX = _startTranslationX + e.TotalX;
-        //        paddle.TranslationY = _startTranslationY + e.TotalY;
-        //    }
-        //}
 
     }
 }
