@@ -18,10 +18,11 @@
 
         <!--Touch="CanvasView_Touch" EnableTouchEvents="True"-->
         <StackLayout Grid.Row="1" Orientation="Horizontal">
-            <Label x:Name="detailsLbl" Text= "" IsVisible="False" TextColor="White" FontSize="Medium"/>
+            <Label x:Name="detailsLbl" Text= "" IsVisible="False" TextColor="White" FontSize="Medium"
+                   VerticalOptions="Center"/>
         </StackLayout>
         <StackLayout x:Name="movementBtns" Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Center" HeightRequest="50">
-            <Button x:Name="moveLeftBtn" Text="Left" TextColor="White" BackgroundColor="Gray" Clicked="MoveLeftBtn_Clicked" WidthRequest="50"
+            <Button x:Name="moveLeftBtn" Text="Left" TextColor="White" BackgroundColor="Gray" Clicked="MoveLeftBtn_Clicked"
                     HorizontalOptions="Start" Margin="5, 0"></Button>
             <Button x:Name="playAgainBtn" Text="Play Again!" FontSize="Medium" TextColor="White"
                     BackgroundColor="Gray" IsVisible="False" Clicked="PlayAgainBtn_Clicked"

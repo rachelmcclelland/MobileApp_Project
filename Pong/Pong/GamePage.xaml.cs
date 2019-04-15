@@ -153,7 +153,7 @@ namespace Pong
             CheckForCollision(height);
 
             // check what the score is, if greater than 10 make the ball move faster
-            if(score > 10)
+            if(score >= 10)
             {
                 speedX = 3;
                 speedY = 3;
@@ -240,6 +240,7 @@ namespace Pong
             //if the ball is moving down, check for a collision
             if (moveDown)
             {
+                // REMOVE VARIABLES WHEN DONE WITH THEM
                 var w = windowWidth;
                 var h = windowHeight;
                 var xBall = x;
@@ -349,6 +350,9 @@ namespace Pong
             exitGameBtn.IsVisible = false;
 
             detailsLbl.IsVisible = false;
+
+            paddleX = windowWidth / 2;
+
         }
 
         private void ExitGameBtn_Clicked(object sender, EventArgs e)
@@ -370,8 +374,13 @@ namespace Pong
                 {
                     // when the player is found, update that players score and 
                     // save the player to the file
-                    player.Score = score;
-                    Utils.SavePlayerToFile(App.players);
+
+                    //update only if new score is higher than old score
+                    if(player.Score < score)
+                    {
+                        player.Score = score;
+                        Utils.SavePlayerToFile(App.players);
+                    }                  
                     break;
                 }
             }
