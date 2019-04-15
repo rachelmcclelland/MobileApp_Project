@@ -96,7 +96,7 @@ namespace Pong
                 //set the paddles x and y co ords
                  paddleX = windowWidth / 2;
                 //paddleX = 0;
-                paddleY = height - 100;
+                paddleY = height - 50;
 
                 // set the starting position of the ball to be random
                 // between 0 and the width of the canvas
@@ -152,8 +152,15 @@ namespace Pong
             // check if collision has occured
             CheckForCollision(height);
 
+            // check what the score is, if greater than 10 make the ball move faster
+            if(score > 10)
+            {
+                speedX = 3;
+                speedY = 3;
+            }
+
             //check if the ball misses the paddle
-            //CheckForGameOver(height);
+            CheckForGameOver(height);
             
         }// CanvasView_PaintSurface
 
@@ -242,7 +249,7 @@ namespace Pong
                 var pX = paddleX + paddle.Width;
                 var pY = paddleY + paddle.Height;
                 // check is the ball collides with the paddle and if so,bounce back & increment score by 1
-                if (y >= (height - 110) && x >= paddleX && x <= paddleX + paddle.Width)
+                if (y >= (height - 60) && x >= paddleX && x <= paddleX + paddle.Width)
                 //if(y >= paddleY && x >= paddleX && x <= paddleX + 170)
                 {
 
@@ -283,7 +290,7 @@ namespace Pong
         {
             // if the y co ordinate is greater than where the paddle is sitting,
             // then game is over
-            if(y >312)
+            if(y > height - 50)
             {   
                 // hide the move buttons
                 moveLeftBtn.IsVisible = false;
@@ -308,7 +315,7 @@ namespace Pong
             // when the left button is clicked, decrease the x position of the paddle
             // so that it moves left
             matrix.TransX -= 20;
-            paddleX -= 55;
+            paddleX -= 62;
         }// MoveLeftBtn_Clicked
 
         private void MoveRightBtn_Clicked(object sender, EventArgs e)
@@ -316,7 +323,7 @@ namespace Pong
             // if the right button is clicked, increase the x position of the paddle,
             // which moves the ball right
             matrix.TransX += 20;
-            paddleX += 55;
+            paddleX += 62;
         }// MoveRightBtn_Clicked
 
         private void PlayAgainBtn_Clicked(object sender, EventArgs e)
