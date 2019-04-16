@@ -4,7 +4,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pong.GamePage">
 
- 
     <Grid x:Name="board">
         <Grid.RowDefinitions>
             <RowDefinition Height="7*"/>
@@ -12,8 +11,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <skia:SKCanvasView x:Name="canvasView" PaintSurface="CanvasView_PaintSurface" IgnorePixelScaling="True" 
-                           Touch="CanvasView_Touch" EnableTouchEvents="True" >
+        <skia:SKCanvasView x:Name="canvasView" PaintSurface="CanvasView_PaintSurface" IgnorePixelScaling="True" >
         </skia:SKCanvasView>
 
         <!--Touch="CanvasView_Touch" EnableTouchEvents="True"-->

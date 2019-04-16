@@ -391,43 +391,44 @@ namespace Pong
         SKPoint previousPoint;
         SKRect rect;
 
-        private void CanvasView_Touch(object sender, SKTouchEventArgs e)
-        {
-            SKPoint point =
-                new SKPoint((float)(canvasView.CanvasSize.Width * e.Location.X / canvasView.Width),
-                            (float)(canvasView.CanvasSize.Height * e.Location.Y / canvasView.Height));
-            switch(e.ActionType)
-            {
-                case SKTouchAction.Pressed:
+        //private void CanvasView_Touch(object sender, SKTouchEventArgs e)
+        //{
+        //    SKPoint point =
+        //        new SKPoint((float)(canvasView.CanvasSize.Width * e.Location.X / canvasView.Width),
+        //                    (float)(canvasView.CanvasSize.Height * e.Location.Y / canvasView.Height));
+        //    switch(e.ActionType)
+        //    {
+        //        case SKTouchAction.Pressed:
 
-                    rect = new SKRect(paddleX, paddleY, paddleX + paddle.Width, paddleY + paddle.Height);
-                    rect = matrix.MapRect(rect);
+        //            rect = new SKRect(paddleX, paddleY, paddleX + paddle.Width, paddleY + paddle.Height);
+        //            rect = matrix.MapRect(rect);
                    
-                    // Determine if the touch was within that rectangle
-                    if ((e.Location.X > rect.Left && e.Location.X < rect.Right)
-                        && (e.Location.Y > rect.Top && e.Location.Y < rect.Bottom))
-                    {
-                        touchId = e.Id;
-                        previousPoint = point;
-                    }                   
-                    break;
-                case SKTouchAction.Moved:
-                    if (touchId == e.Id)
-                    {
-                        // Adjust the matrix for the new position
-                        matrix.TransX += point.X - previousPoint.X;
-                        previousPoint = point;
-                       // paddleX = matrix.TransX;
-                        //paddleY = matrix.TransY;
-                    }
-                    break;
+        //            // Determine if the touch was within that rectangle
+        //            if ((e.Location.X > rect.Left && e.Location.X < rect.Right)
+        //                && (e.Location.Y > rect.Top && e.Location.Y < rect.Bottom))
+        //            {
+        //                touchId = e.Id;
+        //                previousPoint = point;
+        //            }                   
+        //            break;
+        //        case SKTouchAction.Moved:
+        //            if (touchId == e.Id)
+        //            {
+        //                // Adjust the matrix for the new position
+        //                matrix.TransX += point.X - previousPoint.X;
+        //                previousPoint = point;
+        //               // paddleX = matrix.TransX;
+        //                //paddleY = matrix.TransY;
+        //            }
+        //            break;
 
-                case SKTouchAction.Released:
-                case SKTouchAction.Cancelled:
-                    touchId = -1;
-                    break;
-            }// switch statement
-        }
+        //        case SKTouchAction.Released:
+        //        case SKTouchAction.Cancelled:
+        //            touchId = -1;
+        //            break;
+        //    }// switch statement
+        //}
+
 
     }
 }
