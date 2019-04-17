@@ -30,3 +30,11 @@ This method works the same as the MoveBallVertically method. Instead of checking
 and moving right. If the ball touches either the left or the right side of the screen, then the x position of the ball is changed
 depending on what direction it is going. If it has not touched either side, then it will keep moving in that direction until it 
 does.
+
+CheckForCollision
+This method checks to see if there is a collision between the ball and the paddle. This is done by checking is the y position of the
+ball matches the co-ordinates of where the paddle is sitting and if the x position of the ball is within the range of where the 
+beginning of the paddle is to the end of the paddle (width of the paddle). If this is true, a collision has occurred. A sound plays
+that was embedded from the shared library to say that a bounce has occurred, the score increased. The moveUp variable is set to true 
+and moveDown is set to false. This makes sure that the right statement is gone into for the ball to move the right direction again.
+

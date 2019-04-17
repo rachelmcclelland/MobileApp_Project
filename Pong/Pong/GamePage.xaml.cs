@@ -240,15 +240,6 @@ namespace Pong
             //if the ball is moving down, check for a collision
             if (moveDown)
             {
-                // REMOVE VARIABLES WHEN DONE WITH THEM
-                var w = windowWidth;
-                var h = windowHeight;
-                var xBall = x;
-                var yBall = y;
-                var padX = paddleX;
-                var padY = paddleY;
-                var pX = paddleX + paddle.Width;
-                var pY = paddleY + paddle.Height;
                 // check is the ball collides with the paddle and if so,bounce back & increment score by 1
                 if (y >= (height - 60) && x >= paddleX && x <= paddleX + paddle.Width)
                 //if(y >= paddleY && x >= paddleX && x <= paddleX + 170)
