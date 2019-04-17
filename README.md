@@ -104,3 +104,6 @@ This method returns an Observable Collection of type Player. If the file cannot 
 
 SavePlayerToFile
 This method saves the players details back to the file.
+
+
+Please read the wiki for user guide and images on how the game works
