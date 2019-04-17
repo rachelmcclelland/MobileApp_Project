@@ -308,7 +308,7 @@ namespace Pong
 
                 detailsLbl.IsVisible = true;
                 detailsLbl.Text = App.pName + ", your score was: " + score;
-            }       
+                }       
         }// CheckForGameOver
 
         private void MoveLeftBtn_Clicked(object sender, EventArgs e)
@@ -386,10 +386,11 @@ namespace Pong
             }
         } // UpdatePlayerDetails
 
+        #region commented out code
         // Touch information
-        long touchId = -1;
-        SKPoint previousPoint;
-        SKRect rect;
+        //long touchId = -1;
+        //SKPoint previousPoint;
+        //SKRect rect;
 
         //private void CanvasView_Touch(object sender, SKTouchEventArgs e)
         //{
@@ -402,7 +403,7 @@ namespace Pong
 
         //            rect = new SKRect(paddleX, paddleY, paddleX + paddle.Width, paddleY + paddle.Height);
         //            rect = matrix.MapRect(rect);
-                   
+
         //            // Determine if the touch was within that rectangle
         //            if ((e.Location.X > rect.Left && e.Location.X < rect.Right)
         //                && (e.Location.Y > rect.Top && e.Location.Y < rect.Bottom))
@@ -428,7 +429,7 @@ namespace Pong
         //            break;
         //    }// switch statement
         //}
-
+        #endregion
 
     }
 }

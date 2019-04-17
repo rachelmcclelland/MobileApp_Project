@@ -15,7 +15,7 @@
         </skia:SKCanvasView>
 
         <!--Touch="CanvasView_Touch" EnableTouchEvents="True"-->
-        <StackLayout Grid.Row="1" Orientation="Horizontal">
+        <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Center">
             <Label x:Name="detailsLbl" Text= "" IsVisible="False" TextColor="White" FontSize="Medium"
                    VerticalOptions="Center"/>
         </StackLayout>
