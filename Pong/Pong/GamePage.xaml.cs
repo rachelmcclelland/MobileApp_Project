@@ -342,6 +342,7 @@ namespace Pong
 
             detailsLbl.IsVisible = false;
 
+            //paddle is set back to the middle of the screen
             paddleX = windowWidth / 2;
 
         }
