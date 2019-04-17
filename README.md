@@ -1,11 +1,33 @@
 Visual Studio Version 15.9.6
 
+MAIN PAGE
 The app starts of on the main page displaying the name of the name, a label, an entry box and a button. The background
 are layers of grey bricks. The name of the game is called Pong. The entry box is used to allow the player to enter in
 their name which is then stored in a file with their highest score. This page also includes a button, that on start up 
 is not clickable. It only becomes clickable when the player has entered in some text into the entry box provided.
 Once the player clicks on the button, they will be brought to the game page where all functionality takes place.
+In the contructor of this page, the SetDefaultSettings method is called.
 
+SetDefaultSettings
+This method sets a Boolean variable to false which makes sure the button is not clickable. The Observable Collection
+in the App.xaml.cs page then stored all the players from the file. This is done by calling the ReadPlayersFromFile
+method in the Utils class.
+
+Name_TextChanged
+This is a TextChanged event that is on the entry box. It checks if the text in the entry box is blank. If so, keep the
+button disabled. If there is text in the entry box, then set the button to be clickable and save the name in a variable
+in the App.xaml.cs page. This allows the name to be used on the game page as well.
+
+GamePage_Clicked
+This is the name of the name that is called when the player clicks the "PLAY" button. It calls the CheckIfPlayerExists
+method and then navigates to the Game Page.
+
+CheckIfPlayerExists
+This method loops through all the players in the Observable Collection to see if that name exists. If it does, then it
+breaks out of the loop as nothing else needs to be done. If it does not exist, then a new player is created and added
+to the Observable Collection which is then saved to the file with a default score of 0.
+
+GAME PAGE
 In the constructor of the game page there is a timer that allows the canvas i have displayed to keep redrawing itself
 throughout the game. 
 
@@ -73,3 +95,12 @@ UpdatePlayerDetails
 This method loops through all the players that are stored in an Observable Collection in the App.xaml.cs. When the player with that name has
 been found, their score is updated if the old score is lower than their new score. It calls the SavePlayerToFile method in the Utils class
 and passes in the players.
+
+UTILS
+This class deals with any work done on the file.
+
+ReadPlayersFromFile
+This method returns an Observable Collection of type Player. If the file cannot be found it uses the default file. 
+
+SavePlayerToFile
+This method saves the players details back to the file.

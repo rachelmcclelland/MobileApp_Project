@@ -74,11 +74,5 @@ namespace Pong
             }
         }
 
-        private void Save_Clicked(object sender, EventArgs e)
-        {
-            CheckIfPlayerExists(entName.Text);
-            playBtn.IsEnabled = true;
-
-        }
     }
 }
